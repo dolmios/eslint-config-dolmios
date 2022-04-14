@@ -1,25 +1,12 @@
 module.exports = {
-  env: {
-    browser: true,
-    node: true,
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'next/core-web-vitals',
-    'prettier',
-    'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
-    'sort-keys-fix/sort-keys-fix',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'next/core-web-vitals', 'prettier', 'plugin:jsx-a11y/recommended'],
   parser: '@typescript-eslint/parser',
+  plugins: ['jsx-a11y', 'sort-keys-fix', '@typescript-eslint'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
   },
-  root: true,
   rules: {
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'error',
@@ -152,10 +139,6 @@ module.exports = {
         initialized: 'never',
       },
     ],
-    'react/jsx-sort-props': 1,
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/sort-prop-types': 1,
     semi: ['error', 'always'],
     'semi-spacing': ['error', { after: true, before: false }],
     'sort-keys': 'error',
