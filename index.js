@@ -11,6 +11,7 @@ module.exports = {
     'prettier',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
+    'sort-keys-fix/sort-keys-fix',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -18,7 +19,6 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['@typescript-eslint', 'react-hooks', 'sort-keys-fix'],
   root: true,
   rules: {
     '@typescript-eslint/ban-ts-ignore': 'off',
