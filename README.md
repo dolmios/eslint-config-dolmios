@@ -4,6 +4,9 @@ My personal ESLint configuration preferences.
 
 ### Installation
 
+Ensure that you have `eslint` and `next` installed. Our configuration utilises the [Next.js Core Web Vitals](https://nextjs.org/docs/basic-features/eslint#core-web-vitals)
+configuration as a baseline, alongside handling `parser`, `plugins` and `settings`.
+
 ```
 yarn add eslint-config-dolmios
 ```

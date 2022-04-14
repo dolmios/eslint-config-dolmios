@@ -1,12 +1,5 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'next/core-web-vitals', 'prettier', 'plugin:jsx-a11y/recommended'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['jsx-a11y', 'sort-keys-fix', '@typescript-eslint'],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:@typescript-eslint/recommended-requiring-type-checking', 'next/core-web-vitals', 'prettier'],
   rules: {
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'error',
@@ -63,18 +56,6 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
-    'jsx-a11y/anchor-is-valid': 'off',
-    'jsx-a11y/label-has-associated-control': [
-      'error',
-      {
-        assert: 'either',
-        controlComponents: [],
-        depth: 25,
-        labelAttributes: [],
-        labelComponents: [],
-      },
-    ],
-    'jsx-a11y/media-has-caption': 'off',
     'no-alert': 'error',
     'no-array-constructor': 'error',
     'no-console': [
@@ -142,7 +123,6 @@ module.exports = {
     semi: ['error', 'always'],
     'semi-spacing': ['error', { after: true, before: false }],
     'sort-keys': 'error',
-    'sort-keys-fix/sort-keys-fix': 'warn',
     'space-before-blocks': ['error', 'always'],
     'space-before-function-paren': [
       'error',
