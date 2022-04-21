@@ -1,10 +1,11 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'next/core-web-vitals', 'prettier'],
+  root: true,
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  extends: ['eslint:recommended', 'plugin:import/recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   rules: {
-    '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'error',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/no-non-null-assertion': 'error',
     '@typescript-eslint/no-unused-vars': [
       'error',
@@ -122,7 +123,6 @@ module.exports = {
     ],
     semi: ['error', 'always'],
     'semi-spacing': ['error', { after: true, before: false }],
-    'sort-keys': 'error',
     'space-before-blocks': ['error', 'always'],
     'space-before-function-paren': [
       'error',
