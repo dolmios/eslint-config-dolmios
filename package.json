@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-dolmios",
   "description": "Linting setup.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "bugs": {
     "url": "https://github.com/dolmios/eslint-config-dolmios/issues"

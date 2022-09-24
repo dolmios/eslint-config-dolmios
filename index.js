@@ -154,7 +154,7 @@ module.exports = {
     'no-tabs': 0,
     'no-template-curly-in-string': 'error',
     'no-trailing-spaces': 'off',
-    'no-undef': 'warn',
+    'no-undef': 'off',
     'no-unexpected-multiline': 0,
     'no-unreachable-loop': 'error',
     'no-unused-expressions': [
