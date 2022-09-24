@@ -12,6 +12,5 @@
   "insertPragma": true,
   "arrowParens": "always",
   "proseWrap": "preserve",
-  "htmlWhitespaceSensitivity": "ignore",
-  "jsxBracketSameLine": true
+  "htmlWhitespaceSensitivity": "ignore"
 }
