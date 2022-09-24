@@ -1,18 +1,19 @@
 {
   "name": "eslint-config-dolmios",
-  "description": "My personal ESLint configuration preferences.",
-  "version": "1.0.5",
+  "description": "Linting setup.",
+  "version": "1.0.6",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "bugs": {
     "url": "https://github.com/dolmios/eslint-config-dolmios/issues"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.19.0",
-    "eslint-plugin-import": "^2.20.0",
-    "@typescript-eslint/parser": "^5.19.0",
-    "eslint": "^8.13.0",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.6.2"
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.24.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
   },
   "homepage": "https://github.com/dolmios/eslint-config-dolmios#readme",
   "keywords": [
@@ -29,19 +30,12 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "peerDependencies": {
-    "eslint": ">= 8.0.0",
-    "prettier": ">= 2.0.0",
-    "typescript": ">= 4.0.0",
-    "@typescript-eslint/parser": "^5.19.0",
-    "@typescript-eslint/eslint-plugin": "^5.19.0"
-  },
-  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dolmios/eslint-config-dolmios.git"
   },
   "scripts": {
     "test": "eslint --ext .js"
-  }
+  },
+  "packageManager": "yarn@3.2.3"
 }
