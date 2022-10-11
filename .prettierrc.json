@@ -9,7 +9,6 @@
   "trailingComma": "es5",
   "bracketSpacing": true,
   "bracketSameLine": true,
-  "insertPragma": true,
   "arrowParens": "always",
   "proseWrap": "preserve",
   "htmlWhitespaceSensitivity": "ignore"
