@@ -8,7 +8,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:import/recommended',
     'eslint:recommended',
-    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['sort-keys-fix', '@typescript-eslint'],

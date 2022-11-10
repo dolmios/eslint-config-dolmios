@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-dolmios",
   "description": "Linting setup.",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "bugs": {
     "url": "https://github.com/dolmios/eslint-config-dolmios/issues"
@@ -10,7 +10,6 @@
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "eslint": "^8.27.0",
-    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "prettier": "^2.7.1",
@@ -31,12 +30,12 @@
   ],
   "license": "MIT",
   "main": "index.js",
+  "packageManager": "yarn@3.2.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dolmios/eslint-config-dolmios.git"
   },
   "scripts": {
     "test": "eslint --ext .js"
-  },
-  "packageManager": "yarn@3.2.4"
+  }
 }
