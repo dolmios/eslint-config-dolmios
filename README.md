@@ -5,13 +5,8 @@ Linting setup.
 ### Installation
 
 Ensure that you have `eslint`installed. Then install the package:
-
 ```bash
-
-```
-
 yarn add eslint-config-dolmios
-
 ````
 
 ### Usage
