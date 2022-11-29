@@ -1,6 +1,6 @@
 # eslint-config-dolmios
 
-Linting setup.
+My ESLint and Prettier configuration for Typescript.
 
 ### Installation
 
