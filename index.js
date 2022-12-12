@@ -4,11 +4,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/recommended',
-    'eslint:recommended',
-  ],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:import/recommended', 'eslint:recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['sort-keys-fix', '@typescript-eslint'],
   root: true,
