@@ -23,7 +23,7 @@ Populate `.eslintrc` with the following, and code away.
 Prettier is configured to work nicely with this config, though is an optional inclusion. If you'd like to include the config, you can add it to `package.json`.
 
 ```json
-"prettier": "eslint-config-dolmios/.prettierrc"
+"prettier": "eslint-config-dolmios/configs/prettier" // or "eslint-config-dolmios/.prettierrc
 ```
 
 #### Extending Prettier
@@ -33,8 +33,8 @@ Prettier is configured to work nicely with this config, though is an optional in
 
 ```js
 module.exports = {
-  ...require("eslint-config-dolmios/configs/prettier/base.json"),
-  semi: false,
+  ...require("eslint-config-dolmios/configs/prettier"),
+  parser: "babel",
 };
 ```
 
@@ -43,7 +43,7 @@ module.exports = {
 This config also exports two TSConfig setups, `base` and `lib` respectively. The _base_ config is generally suitable. To include either, extend your `tsconfig.json`.
 
 ```json
-"extends": "eslint-config-dolmios/configs/tsconfig/base.json"
+"extends": "eslint-config-dolmios/configs/tsconfig"
 // "extends": "eslint-config-dolmios/configs/tsconfig/lib" (req. further config for source and dist)
 ```
 
