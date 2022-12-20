@@ -1,0 +1,20 @@
+module.exports = {
+  $schema: "https://json.schemastore.org/tsconfig",
+  display: "dolmios",
+  compilerOptions: {
+    target: "es6",
+    lib: ["dom", "dom.iterable", "esnext"],
+    allowJs: true,
+    skipLibCheck: true,
+    strict: true,
+    forceConsistentCasingInFileNames: true,
+    noEmit: true,
+    esModuleInterop: true,
+    module: "esnext",
+    moduleResolution: "node",
+    resolveJsonModule: true,
+    isolatedModules: true,
+    jsx: "preserve",
+    incremental: true,
+  },
+};
