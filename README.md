@@ -1,6 +1,6 @@
 # eslint-config-dolmios
 
-> A simple ESLint setup using [@typescript-eslint](https://typescript-eslint.io).
+> A simple ESLint setup using [@typescript-eslint](https://typescript-eslint.io), with Prettier and a couple TSConfig setup.
 
 ## Install
 
@@ -18,12 +18,33 @@ Populate `.eslintrc` with the following, and code away.
 }
 ```
 
-#### Usage with Prettier
+### Usage with Prettier
 
 Prettier is configured to work nicely with this config, though is an optional inclusion. If you'd like to include the config, you can add it to `package.json`.
 
 ```json
-"prettier": "eslint-config-dolmios/.prettierrc.json"
+"prettier": "eslint-config-dolmios/.prettierrc"
+```
+
+#### Extending Prettier
+
+> This method does **not** offer a way to _extend_ the configuration to overwrite some properties from the shared configuration. If you need to do that, import the file in a `.prettierrc.js` file and export the modifications.
+> [https://prettier.io/docs/en/](https://prettier.io/docs/en/configuration.html#sharing-configurations)
+
+```js
+module.exports = {
+  ...require("eslint-config-dolmios/configs/prettier/base.js"),
+  semi: false,
+};
+```
+
+### Usage with TSConfig
+
+This config also exports two TSConfig setups, `base` and `lib` respectively. The _base_ config is generally suitable. To include either, extend your `tsconfig.json`.
+
+```json
+"extends": "eslint-config-dolmios/configs/tsconfig/base.json"
+// "extends": "eslint-config-dolmios/configs/tsconfig/lib" (req. further config for source and dist)
 ```
 
 ## Contributing
@@ -34,7 +55,4 @@ Feel free to get in touch with feedback, advice or suggestions. See [Conventiona
 
 - [eslint-plugin-sort-keys-fix](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix)
 - [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import)
-
-## License
-
-It's an ESLINT config, go crazy.
+- [@tsconfig/next](https://www.npmjs.com/package/@tsconfig/next)

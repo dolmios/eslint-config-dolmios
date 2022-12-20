@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-dolmios",
   "description": " A simple ESLint setup using @typescript-eslint",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "bugs": {
     "url": "https://github.com/dolmios/eslint-config-dolmios/issues"
@@ -30,6 +30,7 @@
     "url": "git+https://github.com/dolmios/eslint-config-dolmios.git"
   },
   "scripts": {
-    "test": "eslint --ext .js"
+    "lint": "eslint --ext .js",
+    "prettier": "prettier --write ."
   }
 }
