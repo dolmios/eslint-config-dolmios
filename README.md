@@ -18,6 +18,16 @@ Populate `.eslintrc` with the following, and code away.
 }
 ```
 
+Alternatively, you can use `eslintConfig` in `package.json`.
+
+```json
+{
+  "eslintConfig": {
+    "extends": ["dolmios"]
+  }
+}
+```
+
 ### Usage with Prettier
 
 Prettier is configured to work nicely with this config, though is an optional inclusion. If you'd like to include the config, you can add it to `package.json`.
