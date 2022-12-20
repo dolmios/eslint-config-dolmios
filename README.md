@@ -33,7 +33,7 @@ Prettier is configured to work nicely with this config, though is an optional in
 
 ```js
 module.exports = {
-  ...require("eslint-config-dolmios/configs/prettier/base.js"),
+  ...require("eslint-config-dolmios/configs/prettier/base.json"),
   semi: false,
 };
 ```
