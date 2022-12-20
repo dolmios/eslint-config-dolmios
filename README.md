@@ -33,7 +33,7 @@ Alternatively, you can use `eslintConfig` in `package.json`.
 Prettier is configured to work nicely with this config, though is an optional inclusion. If you'd like to include the config, you can add it to `package.json`.
 
 ```json
-"prettier": "eslint-config-dolmios/configs/prettier" // or "eslint-config-dolmios/.prettierrc
+"prettier": "eslint-config-dolmios/configs/prettier"
 ```
 
 #### Extending Prettier
@@ -54,7 +54,6 @@ This config also exports two TSConfig setups, `base` and `lib` respectively. The
 
 ```json
 "extends": "eslint-config-dolmios/configs/tsconfig"
-// "extends": "eslint-config-dolmios/configs/tsconfig/lib" (req. further config for source and dist)
 ```
 
 ## Contributing
