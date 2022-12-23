@@ -4,11 +4,10 @@
     "parser": {
       "decorators": true,
       "dynamicImport": true,
-      "jsx": true,
       "syntax": "typescript",
       "tsx": true
     },
-    "target": "esnext"
+    "target": "es2022"
   },
   "minify": false,
   "module": {
