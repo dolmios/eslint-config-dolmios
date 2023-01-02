@@ -4,8 +4,8 @@
 
 ## Install
 
-```bash
-npm install eslint-config-dolmios
+```sh
+pnpm add eslint-config-dolmios
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ Prettier is configured to work nicely with this config, though is an optional in
 
 #### Extending Prettier
 
-> This method does **not** offer a way to _extend_ the configuration to overwrite some properties from the shared configuration. If you need to do that, import the file in a `.prettierrc.js` file and export the modifications.
+> The above method does **not** offer a way to _extend_ the configuration to overwrite some properties from the shared configuration. If you need to do that, import the file in a `.prettierrc.js` file and export the modifications.
 > [https://prettier.io/docs/en/](https://prettier.io/docs/en/configuration.html#sharing-configurations)
 
 ```js

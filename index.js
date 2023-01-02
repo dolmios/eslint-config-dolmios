@@ -12,6 +12,7 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["sort-keys-fix", "@typescript-eslint"],
   root: true,
+
   rules: {
     "@typescript-eslint/brace-style": "off",
     "@typescript-eslint/comma-dangle": "off",
