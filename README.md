@@ -1,6 +1,6 @@
 # eslint-config-dolmios
 
-> A simple ESLint setup using [@typescript-eslint](https://typescript-eslint.io), with Prettier and a couple TSConfig setup.
+> A simple ESLint setup using [@typescript-eslint](https://typescript-eslint.io), with Prettier and a couple TSConfig setups.
 
 ## Install
 
