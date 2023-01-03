@@ -36,7 +36,13 @@ module.exports = {
     "react/destructuring-assignment": ["warn"],
     "react/jsx-boolean-value": ["warn"],
     "react/jsx-handler-names": ["warn"],
-    "react/jsx-no-bind": ["warn"],
+    "react/jsx-no-bind": [
+      "warn",
+      {
+        ignoreRefs: true,
+        allowArrowFunctions: true,
+      },
+    ],
     "react/jsx-no-useless-fragment": ["warn"],
     "react/jsx-pascal-case": ["warn"],
     "react/jsx-sort-props": [
