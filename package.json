@@ -24,6 +24,10 @@
     "typescript",
     "prettier"
   ],
+  "files": [
+    "configs",
+    "index.js"
+  ],
   "license": "MIT",
   "main": "index.js",
   "prettier": "./configs/prettier.json",

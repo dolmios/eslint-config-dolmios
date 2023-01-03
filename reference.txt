@@ -113,9 +113,6 @@
     "react/jsx-boolean-value": [
       "warn"
     ],
-    "react/jsx-filename-extension": [
-      "warn"
-    ],
     "react/jsx-handler-names": [
       "warn"
     ],
@@ -129,7 +126,17 @@
       "warn"
     ],
     "react/jsx-sort-props": [
-      "warn"
+      "warn",
+      {
+        "ignoreCase": true,
+        "callbacksLast": true,
+        "shorthandFirst": false,
+        "shorthandLast": false,
+        "noSortAlphabetically": false,
+        "reservedFirst": true,
+        "multiline": "ignore",
+        "locale": "auto"
+      }
     ],
     "react/no-access-state-in-setstate": [
       "warn"
@@ -243,7 +250,7 @@
       "warn"
     ],
     "no-unreachable-loop": [
-      "error"
+      "warn"
     ],
     "no-unused-expressions": [
       "warn"
@@ -1070,5 +1077,8 @@
       }
     }
   },
-  "ignorePatterns": []
+  "ignorePatterns": [
+    "next-env.d.ts",
+    "next.config.js"
+  ]
 }
