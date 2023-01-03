@@ -62,7 +62,6 @@ module.exports = {
     "react/no-arrow-function-lifecycle": ["warn"],
     "react/no-danger": ["warn"],
     "react/no-invalid-html-attribute": ["warn"],
-    "react/no-multi-comp": ["warn"],
     "react/no-set-state": ["warn"],
     "react/no-this-in-sfc": ["warn"],
     "react/no-typos": ["warn"],
