@@ -62,6 +62,4 @@ Feel free to get in touch with feedback, advice or suggestions. See [Conventiona
 
 ## Acknowledgments
 
-- [eslint-plugin-sort-keys-fix](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix)
-- [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import)
-- [@tsconfig/next](https://www.npmjs.com/package/@tsconfig/next)
+- [eslint-plugin-typescript-sort-keys](https://github.com/infctr/eslint-plugin-typescript-sort-keys#readme)
