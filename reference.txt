@@ -36,16 +36,16 @@
       "off"
     ],
     "typescript-sort-keys/interface": [
-      "error"
+      "warn"
     ],
     "typescript-sort-keys/string-enum": [
-      "error"
+      "warn"
     ],
     "@typescript-eslint/explicit-function-return-type": [
       "warn"
     ],
     "@typescript-eslint/no-non-null-assertion": [
-      "error"
+      "warn"
     ],
     "jsx-a11y/aria-role": [
       "warn"
@@ -117,7 +117,14 @@
       "warn"
     ],
     "react/jsx-no-bind": [
-      "warn"
+      "warn",
+      {
+        "ignoreRefs": true,
+        "allowArrowFunctions": true,
+        "allowBind": false,
+        "allowFunctions": false,
+        "ignoreDOMComponents": false
+      }
     ],
     "react/jsx-no-useless-fragment": [
       "warn"
@@ -150,9 +157,6 @@
     "react/no-invalid-html-attribute": [
       "warn"
     ],
-    "react/no-multi-comp": [
-      "warn"
-    ],
     "react/no-set-state": [
       "warn"
     ],
@@ -178,7 +182,7 @@
       "warn"
     ],
     "import/order": [
-      "error",
+      "warn",
       {
         "alphabetize": {
           "caseInsensitive": true,

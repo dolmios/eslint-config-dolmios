@@ -12,19 +12,15 @@ pnpm add eslint-config-dolmios
 
 Populate `.eslintrc` with the following, and code away.
 
-```json
-{
-  "extends": ["dolmios"]
-}
+```
+"extends": ["dolmios"]
 ```
 
 Alternatively, you can use `eslintConfig` in `package.json`.
 
-```json
-{
-  "eslintConfig": {
-    "extends": ["dolmios"]
-  }
+```
+"eslintConfig": {
+  "extends": ["dolmios"]
 }
 ```
 
@@ -32,19 +28,20 @@ Alternatively, you can use `eslintConfig` in `package.json`.
 
 Prettier is configured to work nicely with this config, though is an optional inclusion. If you'd like to include the config, you can add it to `package.json`.
 
-```json
+```
 "prettier": "eslint-config-dolmios/configs/prettier"
 ```
 
 #### Extending Prettier
 
 > The above method does **not** offer a way to _extend_ the configuration to overwrite some properties from the shared configuration. If you need to do that, import the file in a `.prettierrc.js` file and export the modifications.
+
 > [https://prettier.io/docs/en/](https://prettier.io/docs/en/configuration.html#sharing-configurations)
 
-```js
+```
 module.exports = {
-  ...require("eslint-config-dolmios/configs/prettier"),
-  parser: "babel",
+...require("eslint-config-dolmios/configs/prettier"),
+parser: "babel",
 };
 ```
 
@@ -52,7 +49,7 @@ module.exports = {
 
 This config also exports two TSConfig setups, `base` and `lib` respectively. The _base_ config is generally suitable. To include either, extend your `tsconfig.json`.
 
-```json
+```
 "extends": "eslint-config-dolmios/configs/tsconfig"
 ```
 
