@@ -4,7 +4,7 @@
     "node": true
   },
   "globals": {},
-  "parser": "/Users/dolmios/Github/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.48.0_iukboom6ndih5an6iafl45j2fe/node_modules/@typescript-eslint/parser/dist/index.js",
+  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.53.0_7kw3g6rralp5ps6mg3uyzz6azm/node_modules/@typescript-eslint/parser/dist/index.js",
   "parserOptions": {
     "sourceType": "module",
     "requireConfigFile": false,
@@ -186,7 +186,8 @@
       {
         "alphabetize": {
           "caseInsensitive": true,
-          "order": "asc"
+          "order": "asc",
+          "orderImportKind": "ignore"
         },
         "groups": [
           "builtin",
@@ -196,7 +197,8 @@
           "index"
         ],
         "newlines-between": "always",
-        "warnOnUnassignedImports": false
+        "warnOnUnassignedImports": false,
+        "distinctGroup": true
       }
     ],
     "no-alert": [
@@ -963,6 +965,9 @@
     "jsx-a11y/role-supports-aria-props": [
       "warn"
     ],
+    "react/jsx-no-target-blank": [
+      "off"
+    ],
     "react-hooks/rules-of-hooks": [
       "error"
     ],
@@ -979,9 +984,6 @@
       2
     ],
     "react/jsx-no-duplicate-props": [
-      2
-    ],
-    "react/jsx-no-target-blank": [
       2
     ],
     "react/jsx-no-undef": [
@@ -1059,7 +1061,7 @@
       "version": "detect"
     },
     "import/parsers": {
-      "/Users/dolmios/Github/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.48.0_iukboom6ndih5an6iafl45j2fe/node_modules/@typescript-eslint/parser/dist/index.js": [
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.53.0_7kw3g6rralp5ps6mg3uyzz6azm/node_modules/@typescript-eslint/parser/dist/index.js": [
         ".ts",
         ".mts",
         ".cts",
@@ -1068,7 +1070,7 @@
       ]
     },
     "import/resolver": {
-      "/Users/dolmios/Github/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-node@0.3.6/node_modules/eslint-import-resolver-node/index.js": {
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-node@0.3.7/node_modules/eslint-import-resolver-node/index.js": {
         "extensions": [
           ".js",
           ".jsx",
@@ -1076,7 +1078,7 @@
           ".tsx"
         ]
       },
-      "/Users/dolmios/Github/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-typescript@3.5.2_ol7jqilc3wemtdbq3nzhywgxq4/node_modules/eslint-import-resolver-typescript/lib/index.cjs": {
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-typescript@3.5.3_mvgyw3chnqkp6sgfmmtihyjpnm/node_modules/eslint-import-resolver-typescript/lib/index.cjs": {
         "alwaysTryTypes": true
       }
     }
