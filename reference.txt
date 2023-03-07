@@ -4,7 +4,7 @@
     "node": true
   },
   "globals": {},
-  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.53.0_7kw3g6rralp5ps6mg3uyzz6azm/node_modules/@typescript-eslint/parser/dist/index.js",
+  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.54.1_ycpbpc6yetojsgtrx3mwntkhsu/node_modules/@typescript-eslint/parser/dist/index.js",
   "parserOptions": {
     "sourceType": "module",
     "requireConfigFile": false,
@@ -534,6 +534,9 @@
     "@babel/semi": [
       "off"
     ],
+    "@typescript-eslint/block-spacing": [
+      "off"
+    ],
     "@typescript-eslint/brace-style": [
       "off"
     ],
@@ -547,6 +550,9 @@
       "off"
     ],
     "@typescript-eslint/indent": [
+      "off"
+    ],
+    "@typescript-eslint/key-spacing": [
       "off"
     ],
     "@typescript-eslint/keyword-spacing": [
@@ -1061,7 +1067,7 @@
       "version": "detect"
     },
     "import/parsers": {
-      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.53.0_7kw3g6rralp5ps6mg3uyzz6azm/node_modules/@typescript-eslint/parser/dist/index.js": [
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.54.1_ycpbpc6yetojsgtrx3mwntkhsu/node_modules/@typescript-eslint/parser/dist/index.js": [
         ".ts",
         ".mts",
         ".cts",
@@ -1078,7 +1084,7 @@
           ".tsx"
         ]
       },
-      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-typescript@3.5.3_mvgyw3chnqkp6sgfmmtihyjpnm/node_modules/eslint-import-resolver-typescript/lib/index.cjs": {
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-typescript@3.5.3_yckic57kx266ph64dhq6ozvb54/node_modules/eslint-import-resolver-typescript/lib/index.cjs": {
         "alwaysTryTypes": true
       }
     }
