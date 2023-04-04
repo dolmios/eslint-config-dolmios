@@ -4,7 +4,7 @@
     "node": true
   },
   "globals": {},
-  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.57.0_eslint@8.37.0_typescript@4.9.5/node_modules/@typescript-eslint/parser/dist/index.js",
+  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.57.1_eslint@8.37.0_typescript@5.0.3/node_modules/@typescript-eslint/parser/dist/index.js",
   "parserOptions": {
     "sourceType": "module",
     "requireConfigFile": false,
@@ -192,6 +192,17 @@
     ],
     "no-useless-return": [
       "warn"
+    ],
+    "no-multi-spaces": [
+      "warn"
+    ],
+    "no-multiple-empty-lines": [
+      "warn",
+      {
+        "max": 1,
+        "maxBOF": 0,
+        "maxEOF": 0
+      }
     ],
     "padding-line-between-statements": [
       "warn",
@@ -436,12 +447,6 @@
       "off"
     ],
     "no-mixed-spaces-and-tabs": [
-      "off"
-    ],
-    "no-multi-spaces": [
-      "off"
-    ],
-    "no-multiple-empty-lines": [
       "off"
     ],
     "no-trailing-spaces": [
@@ -1100,7 +1105,7 @@
       "version": "detect"
     },
     "import/parsers": {
-      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.57.0_eslint@8.37.0_typescript@4.9.5/node_modules/@typescript-eslint/parser/dist/index.js": [
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.57.1_eslint@8.37.0_typescript@5.0.3/node_modules/@typescript-eslint/parser/dist/index.js": [
         ".ts",
         ".mts",
         ".cts",

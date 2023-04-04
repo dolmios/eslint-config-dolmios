@@ -68,6 +68,15 @@ module.exports = {
     "no-useless-concat": ["warn"],
     "no-useless-escape": ["warn"],
     "no-useless-return": ["warn"],
+    "no-multi-spaces": ["warn"],
+    "no-multiple-empty-lines": [
+      "warn",
+      {
+        max: 1,
+        maxBOF: 0,
+        maxEOF: 0,
+      },
+    ],
     "padding-line-between-statements": [
       "warn",
       {
