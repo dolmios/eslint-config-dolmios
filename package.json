@@ -1,20 +1,20 @@
 {
   "name": "eslint-config-dolmios",
   "description": "A simple ESLint config with Prettier and a couple TSConfig setups",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "bugs": {
     "url": "https://github.com/dolmios/eslint-config-dolmios/issues"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "eslint": "^8.37.0",
-    "eslint-config-next": "^13.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "eslint-config-next": "^13.3.1",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-typescript-sort-keys": "^2.3.0",
-    "prettier": "^2.8.7",
-    "typescript": "^5.0.3"
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
   },
   "homepage": "https://github.com/dolmios/eslint-config-dolmios#readme",
   "keywords": [
