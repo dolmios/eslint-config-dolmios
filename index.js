@@ -5,6 +5,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "prettier",
   ],
+  root: true,
   ignorePatterns: ["next-env.d.ts", "next.config.js"],
   parser: "@typescript-eslint/parser",
   plugins: ["typescript-sort-keys"],
@@ -136,6 +137,7 @@ module.exports = {
     "typescript-sort-keys/interface": ["warn"],
     "typescript-sort-keys/string-enum": ["warn"],
     yoda: ["warn"],
+    "react-hooks/exhaustive-deps": ["off"],
   },
   settings: {
     next: {
