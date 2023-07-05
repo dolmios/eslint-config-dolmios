@@ -20,7 +20,9 @@
     "target": "es2022",
     "allowJs": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "display": "dolmios"
 }
