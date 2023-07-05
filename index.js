@@ -64,6 +64,16 @@ module.exports = {
     "no-template-curly-in-string": ["warn"],
     "no-unreachable-loop": ["warn"],
     "no-unused-expressions": ["warn"],
+    "no-unused-labels": ["warn"],
+    "no-useless-backreference": ["warn"],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        args: "none",
+        ignoreRestSiblings: true,
+      },
+    ],
+    "no-useless-catch": ["warn"],
     "no-use-before-define": ["warn"],
     "no-useless-call": ["warn"],
     "no-useless-concat": ["warn"],
