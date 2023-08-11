@@ -1,10 +1,5 @@
 module.exports = {
-  extends: [
-    "plugin:import/recommended",
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-  ],
+  extends: ["plugin:import/recommended", "next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
   root: true,
   ignorePatterns: ["next-env.d.ts", "next.config.js"],
   parser: "@typescript-eslint/parser",

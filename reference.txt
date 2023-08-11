@@ -4,7 +4,7 @@
     "node": true
   },
   "globals": {},
-  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.61.0_eslint@8.44.0_typescript@5.1.6/node_modules/@typescript-eslint/parser/dist/index.js",
+  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@6.3.0_eslint@8.47.0_typescript@5.1.6/node_modules/@typescript-eslint/parser/dist/index.js",
   "parserOptions": {
     "sourceType": "module",
     "requireConfigFile": false,
@@ -447,6 +447,9 @@
     "linebreak-style": [
       "off"
     ],
+    "max-statements-per-line": [
+      "off"
+    ],
     "multiline-ternary": [
       "off"
     ],
@@ -532,9 +535,6 @@
       "off"
     ],
     "template-tag-spacing": [
-      "off"
-    ],
-    "unicode-bom": [
       "off"
     ],
     "wrap-iife": [
@@ -711,6 +711,9 @@
     "vue/array-bracket-spacing": [
       "off"
     ],
+    "vue/array-element-newline": [
+      "off"
+    ],
     "vue/arrow-spacing": [
       "off"
     ],
@@ -861,9 +864,6 @@
     "react/jsx-space-before-closing": [
       "off"
     ],
-    "@typescript-eslint/adjacent-overload-signatures": [
-      "error"
-    ],
     "@typescript-eslint/ban-ts-comment": [
       "error"
     ],
@@ -876,22 +876,13 @@
     "@typescript-eslint/no-array-constructor": [
       "error"
     ],
-    "no-empty-function": [
-      "off"
-    ],
-    "@typescript-eslint/no-empty-function": [
-      "error"
-    ],
-    "@typescript-eslint/no-empty-interface": [
+    "@typescript-eslint/no-duplicate-enum-values": [
       "error"
     ],
     "@typescript-eslint/no-explicit-any": [
-      "warn"
-    ],
-    "@typescript-eslint/no-extra-non-null-assertion": [
       "error"
     ],
-    "@typescript-eslint/no-inferrable-types": [
+    "@typescript-eslint/no-extra-non-null-assertion": [
       "error"
     ],
     "no-loss-of-precision": [
@@ -915,6 +906,9 @@
     "@typescript-eslint/no-unnecessary-type-constraint": [
       "error"
     ],
+    "@typescript-eslint/no-unsafe-declaration-merging": [
+      "error"
+    ],
     "no-unused-vars": [
       "off"
     ],
@@ -922,9 +916,6 @@
       "error"
     ],
     "@typescript-eslint/prefer-as-const": [
-      "error"
-    ],
-    "@typescript-eslint/prefer-namespace-keyword": [
       "error"
     ],
     "@typescript-eslint/triple-slash-reference": [
@@ -1121,7 +1112,7 @@
       "version": "detect"
     },
     "import/parsers": {
-      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@5.61.0_eslint@8.44.0_typescript@5.1.6/node_modules/@typescript-eslint/parser/dist/index.js": [
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@6.3.0_eslint@8.47.0_typescript@5.1.6/node_modules/@typescript-eslint/parser/dist/index.js": [
         ".ts",
         ".mts",
         ".cts",
@@ -1130,7 +1121,7 @@
       ]
     },
     "import/resolver": {
-      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-node@0.3.7/node_modules/eslint-import-resolver-node/index.js": {
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-node@0.3.9/node_modules/eslint-import-resolver-node/index.js": {
         "extensions": [
           ".js",
           ".jsx",
@@ -1138,7 +1129,7 @@
           ".tsx"
         ]
       },
-      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-typescript@3.5.5_@typescript-eslint+parser@5.61.0_eslint-import-resolv_6h6w3vwinwupha6pxdvzajmefi/node_modules/eslint-import-resolver-typescript/lib/index.cjs": {
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-typescript@3.6.0_@typescript-eslint+parser@6.3.0_eslint-import-resolve_rbsw5dvmeojc64lq5z47r7wfay/node_modules/eslint-import-resolver-typescript/lib/index.cjs": {
         "alwaysTryTypes": true
       }
     }
