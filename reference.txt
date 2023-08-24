@@ -4,7 +4,7 @@
     "node": true
   },
   "globals": {},
-  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@6.3.0_eslint@8.47.0_typescript@5.1.6/node_modules/@typescript-eslint/parser/dist/index.js",
+  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@6.4.1_eslint@8.47.0_typescript@5.2.2/node_modules/@typescript-eslint/parser/dist/index.js",
   "parserOptions": {
     "sourceType": "module",
     "requireConfigFile": false,
@@ -1112,7 +1112,7 @@
       "version": "detect"
     },
     "import/parsers": {
-      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@6.3.0_eslint@8.47.0_typescript@5.1.6/node_modules/@typescript-eslint/parser/dist/index.js": [
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@6.4.1_eslint@8.47.0_typescript@5.2.2/node_modules/@typescript-eslint/parser/dist/index.js": [
         ".ts",
         ".mts",
         ".cts",
@@ -1129,7 +1129,7 @@
           ".tsx"
         ]
       },
-      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-typescript@3.6.0_@typescript-eslint+parser@6.3.0_eslint-import-resolve_rbsw5dvmeojc64lq5z47r7wfay/node_modules/eslint-import-resolver-typescript/lib/index.cjs": {
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-typescript@3.6.0_@typescript-eslint+parser@6.4.1_eslint-import-resolve_3haz3otu5tipr7s4ck6ku45drm/node_modules/eslint-import-resolver-typescript/lib/index.cjs": {
         "alwaysTryTypes": true
       }
     }
