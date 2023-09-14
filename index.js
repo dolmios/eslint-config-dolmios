@@ -135,6 +135,7 @@ module.exports = {
     "react/no-this-in-sfc": ["warn"],
     "react/no-typos": ["warn"],
     "react/no-unused-state": ["warn"],
+    "react/display-name": ["off"],
     "react/self-closing-comp": ["warn"],
     "react/sort-comp": ["warn"],
     "react/style-prop-object": ["warn"],
