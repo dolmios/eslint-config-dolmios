@@ -4,7 +4,7 @@
     "node": true
   },
   "globals": {},
-  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@6.16.0_eslint@8.56.0_typescript@5.3.3/node_modules/@typescript-eslint/parser/dist/index.js",
+  "parser": "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@7.3.1_eslint@8.57.0_typescript@5.4.3/node_modules/@typescript-eslint/parser/dist/index.js",
   "parserOptions": {
     "sourceType": "module",
     "requireConfigFile": false,
@@ -36,7 +36,7 @@
       "off"
     ],
     "@typescript-eslint/explicit-function-return-type": [
-      "warn"
+      "error"
     ],
     "@typescript-eslint/no-non-null-assertion": [
       "warn"
@@ -188,7 +188,8 @@
       "warn",
       {
         "args": "none",
-        "ignoreRestSiblings": true
+        "ignoreRestSiblings": true,
+        "argsIgnorePattern": "^_"
       }
     ],
     "no-useless-catch": [
@@ -200,8 +201,25 @@
     "no-useless-call": [
       "warn"
     ],
+    "no-useless-constructor": [
+      "warn"
+    ],
     "no-useless-concat": [
       "warn"
+    ],
+    "no-useless-computed-key": [
+      "warn"
+    ],
+    "consistent-this": [
+      "warn",
+      "self"
+    ],
+    "no-mixed-requires": [
+      "warn",
+      {
+        "grouping": true,
+        "allowCall": false
+      }
     ],
     "no-useless-escape": [
       "warn"
@@ -340,7 +358,26 @@
       "warn"
     ],
     "react-hooks/exhaustive-deps": [
-      "off"
+      "warn"
+    ],
+    "no-var": [
+      "error"
+    ],
+    "eqeqeq": [
+      "warn"
+    ],
+    "react-hooks/rules-of-hooks": [
+      "error"
+    ],
+    "@typescript-eslint/no-unnecessary-type-assertion": [
+      "warn"
+    ],
+    "prefer-destructuring": [
+      "warn",
+      {
+        "array": true,
+        "object": true
+      }
     ],
     "curly": [
       0
@@ -1028,9 +1065,6 @@
     "react/jsx-no-target-blank": [
       "off"
     ],
-    "react-hooks/rules-of-hooks": [
-      "error"
-    ],
     "react/jsx-key": [
       2
     ],
@@ -1115,7 +1149,7 @@
       "version": "detect"
     },
     "import/parsers": {
-      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@6.16.0_eslint@8.56.0_typescript@5.3.3/node_modules/@typescript-eslint/parser/dist/index.js": [
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/@typescript-eslint+parser@6.21.0_eslint@8.57.0_typescript@5.4.3/node_modules/@typescript-eslint/parser/dist/index.js": [
         ".ts",
         ".mts",
         ".cts",
@@ -1132,7 +1166,7 @@
           ".tsx"
         ]
       },
-      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-typescript@3.6.1_@typescript-eslint+parser@6.16.0_eslint-import-resolv_rfxwn5to6vp3qvpt4bjzo4griy/node_modules/eslint-import-resolver-typescript/lib/index.cjs": {
+      "/Users/dolmios/GitHub/eslint-config-dolmios/node_modules/.pnpm/eslint-import-resolver-typescript@3.6.1_@typescript-eslint+parser@6.21.0_eslint-import-resolv_x67bnhkdy3z3fbiulmoutqmpp4/node_modules/eslint-import-resolver-typescript/lib/index.cjs": {
         "alwaysTryTypes": true
       }
     }

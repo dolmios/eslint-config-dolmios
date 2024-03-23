@@ -1,20 +1,29 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowJs": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "es2022"
+    "allowJs": true, // Allows JavaScript files to be compiled
+    "esModuleInterop": true, // Enables default imports from modules with no default export
+    "forceConsistentCasingInFileNames": true, // Disallows inconsistently-cased references to the same file
+    "incremental": true, // Enables incremental compilation
+    "isolatedModules": true, // Ensures each file can be safely transpiled without relying on other imports
+    "jsx": "preserve", // Preserves JSX as part of the output to be further consumed by another transform step
+    "lib": ["dom", "dom.iterable", "esnext"], // Specifies library files to be included in the compilation
+    "module": "esnext", // Specifies module code generation
+    "moduleResolution": "node", // Specifies module resolution strategy
+    "noEmit": true, // Suppresses output of .js files
+    "resolveJsonModule": true, // Allows importing of JSON modules
+    "skipLibCheck": true, // Skips type checking of declaration files
+    "strict": true, // Enables all strict type-checking options
+    "strictNullChecks": true, // Enforces strict null checks
+    "noImplicitAny": true, // Raises an error on expressions and declarations with an implied 'any' type
+    "noImplicitReturns": true, // Raises an error when not all code paths in a function return a value
+    "noImplicitThis": true, // Raises an error on 'this' expressions with an implied 'any' type
+    "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file
+    "noUnusedLocals": true, // Reports errors on unused locals
+    "noUnusedParameters": true, // Reports errors on unused parameters
+    "experimentalDecorators": true, // Enables experimental support for ES7 decorators
+    "emitDecoratorMetadata": true, // Emits design-type metadata for decorated declarations in source
+    "target": "es2022" // Specifies ECMAScript target version
   },
   "display": "dolmios"
 }
