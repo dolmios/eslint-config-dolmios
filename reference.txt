@@ -369,9 +369,6 @@
     "react-hooks/rules-of-hooks": [
       "error"
     ],
-    "@typescript-eslint/no-unnecessary-type-assertion": [
-      "warn"
-    ],
     "prefer-destructuring": [
       "warn",
       {

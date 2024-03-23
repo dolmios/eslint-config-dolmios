@@ -160,7 +160,6 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error", // Enforces the rules of hooks
     "react-hooks/exhaustive-deps": "warn", // Warns about missing dependencies in hooks
     "@typescript-eslint/explicit-function-return-type": "error", // Requires explicit return types for functions
-    "@typescript-eslint/no-unnecessary-type-assertion": "warn", // Warns about unnecessary type assertions
     "prefer-destructuring": ["warn", { array: true, object: true }], // Enforces consistent array and object destructuring
   },
   settings: {
