@@ -1,44 +1,45 @@
 {
   "name": "eslint-config-dolmios",
   "description": "A simple ESLint config with Prettier and a couple TSConfig setups",
-  "version": "1.11.1",
+  "version": "2.0.0",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "bugs": {
     "url": "https://github.com/dolmios/eslint-config-dolmios/issues"
   },
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.5.0",
-    "@typescript-eslint/parser": "^8.5.0",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.8",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1",
+    "eslint": "^9.12.0",
+    "eslint-config-next": "^14.2.15",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-typescript-sort-keys": "^3.2.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-typescript-sort-keys": "^3.3.0",
+    "next": "^14.2.15",
     "prettier": "^3.3.3",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   },
+  "files": [
+    "eslint.config.js"
+  ],
   "homepage": "https://github.com/dolmios/eslint-config-dolmios#readme",
   "keywords": [
-    "eslint",
     "config",
+    "eslint",
     "linting",
-    "typescript",
-    "prettier"
-  ],
-  "files": [
-    "configs",
-    "index.js"
+    "prettier",
+    "typescript"
   ],
   "license": "MIT",
-  "main": "index.js",
-  "prettier": "./configs/prettier.json",
+  "main": "eslint.config.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dolmios/eslint-config-dolmios.git"
   },
   "scripts": {
-    "lint": "eslint --ext .js",
-    "prettier": "prettier --write .",
-    "print": "eslint --print-config index.js > reference.txt",
+    "lint": "eslint ./test.js",
+    "prettier": "prettier --write ./test.js",
+    "print": "eslint --print-config eslint.config.js > reference.txt",
     "tidy": "pnpm lint && pnpm prettier"
   }
 }
