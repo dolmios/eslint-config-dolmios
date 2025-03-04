@@ -35,10 +35,13 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: { jsx: true },
+        project: './tsconfig.json',
+        tsconfigRootDir: '.',
       },
       globals: {
         ...globals.browser,
-        ...globals.node
+        ...globals.node,
+        google: true,
       }
     },
     linterOptions: {

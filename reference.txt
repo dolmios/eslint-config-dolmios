@@ -259,6 +259,22 @@
         "argsIgnorePattern": "^_"
       }
     ],
+    "@typescript-eslint/no-explicit-any": [
+      1
+    ],
+    "@typescript-eslint/ban-ts-comment": [
+      1,
+      {
+        "ts-ignore": "allow-with-description",
+        "minimumDescriptionLength": 3
+      }
+    ],
+    "@typescript-eslint/no-inferrable-types": [
+      1
+    ],
+    "@typescript-eslint/prefer-as-const": [
+      1
+    ],
     "jsx-a11y/aria-role": [
       1
     ],
@@ -406,6 +422,24 @@
       1
     ],
     "@next/next/no-unwanted-polyfillio": [
+      1
+    ],
+    "@next/next/no-css-tags": [
+      1
+    ],
+    "@next/next/no-sync-scripts": [
+      1
+    ],
+    "@next/next/google-font-display": [
+      1
+    ],
+    "@next/next/google-font-preconnect": [
+      1
+    ],
+    "@next/next/next-script-for-ga": [
+      1
+    ],
+    "@next/next/no-page-custom-font": [
       1
     ],
     "perfectionist/sort-objects": [
@@ -633,7 +667,9 @@
       "sourceType": "module",
       "ecmaFeatures": {
         "jsx": true
-      }
+      },
+      "project": "./tsconfig.json",
+      "tsconfigRootDir": "."
     },
     "globals": {
       "AbortController": false,
@@ -1773,7 +1809,8 @@
       "module": false,
       "process": false,
       "require": false,
-      "setImmediate": false
+      "setImmediate": false,
+      "google": true
     }
   }
 }

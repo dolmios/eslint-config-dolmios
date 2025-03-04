@@ -8,6 +8,10 @@ const typescriptRules = {
         'warn',
         { args: 'none', ignoreRestSiblings: true, argsIgnorePattern: '^_' },
     ],
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/ban-ts-comment': ['warn', { 'ts-ignore': 'allow-with-description' }],
+    '@typescript-eslint/no-inferrable-types': 'warn',
+    '@typescript-eslint/prefer-as-const': 'warn',
     'no-unused-vars': 'off',
 };
 
@@ -78,6 +82,12 @@ const nextRules = {
     '@next/next/no-html-link-for-pages': 'warn',
     '@next/next/no-img-element': 'warn',
     '@next/next/no-unwanted-polyfillio': 'warn',
+    '@next/next/no-css-tags': 'warn',
+    '@next/next/no-sync-scripts': 'warn',
+    '@next/next/google-font-display': 'warn',
+    '@next/next/google-font-preconnect': 'warn',
+    '@next/next/next-script-for-ga': 'warn',
+    '@next/next/no-page-custom-font': 'warn',
 };
 
 // Perfectionist rules

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-dolmios",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A simple ESLint config with Prettier and a couple TSConfig setups",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "bugs": {
