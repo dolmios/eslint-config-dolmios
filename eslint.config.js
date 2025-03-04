@@ -24,19 +24,22 @@ export default [
       '**/public/**',
       '**/storybook-static/**',
       '**/test/**',
-      '**/tests/**'
+      '**/tests/**',
+      '**/eslint.config.js',
+      '**/eslint.config.mjs',
+      '**/eslint.config.cjs',
+      '**/next.config.js',
+      '**/next-sitemap.config.js'
     ],
   },
   {
-    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
+    files: ['**/*.js', '**/*.jsx', '**/*.mjs', '**/*.cjs', '**/*.ts', '**/*.tsx'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: { jsx: true },
-        project: './tsconfig.json',
-        tsconfigRootDir: '.',
       },
       globals: {
         ...globals.browser,
@@ -60,5 +63,16 @@ export default [
       next: { rootDir: './' },
     },
     rules: customRules,
+  },
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+    languageOptions: {
+      parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir: '.',
+      },
+    },
+    rules: {
+    },
   },
 ];

@@ -13,14 +13,14 @@ This ESLint configuration is designed for use with ESLint v9, which uses a flat 
 ### Setting Up ESLint
 1.  **Create an ESLint Configuration File**: In the root of your project, create a file named  `eslint.config.js`.
 
-2.  **Import and Extend the Configuration**: Add the following content to  `eslint.config.js`  to use the  `eslint-config-dolmios`  configuration:
+2.  **Import and Extend the Configuration**: Add the following content to  `eslint.config.mjs`  to use the  `eslint-config-dolmios`  configuration:
 
 
 ```js
-import dolmiosConfig from "eslint-config-dolmios";
+import dolmios from "eslint-config-dolmios";
 
 export default [
-  ...dolmiosConfig,
+  ...dolmios,
   // Add any project-specific overrides here
 ];
 ```
