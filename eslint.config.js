@@ -13,6 +13,21 @@ import globals from 'globals';
 export default [
   js.configs.recommended,
   {
+    ignores: [
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/build/**',
+      '**/.next/**',
+      '**/out/**',
+      '**/coverage/**',
+      '**/*.min.js',
+      '**/public/**',
+      '**/storybook-static/**',
+      '**/test/**',
+      '**/tests/**'
+    ],
+  },
+  {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     languageOptions: {
       parser: tsParser,
