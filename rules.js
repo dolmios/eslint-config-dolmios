@@ -2,15 +2,15 @@
 
 // TypeScript specific rules
 const typescriptRules = {
+    '@typescript-eslint/ban-ts-comment': ['warn', { 'ts-ignore': 'allow-with-description' }],
     '@typescript-eslint/explicit-function-return-type': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-inferrable-types': 'warn',
     '@typescript-eslint/no-non-null-assertion': 'warn',
     '@typescript-eslint/no-unused-vars': [
         'warn',
-        { args: 'none', ignoreRestSiblings: true, argsIgnorePattern: '^_' },
+        { args: 'none', argsIgnorePattern: '^_', ignoreRestSiblings: true },
     ],
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/ban-ts-comment': ['warn', { 'ts-ignore': 'allow-with-description' }],
-    '@typescript-eslint/no-inferrable-types': 'warn',
     '@typescript-eslint/prefer-as-const': 'warn',
     'no-unused-vars': 'off',
 };
@@ -39,6 +39,8 @@ const a11yRules = {
 
 // React specific rules
 const reactRules = {
+    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
     'react/button-has-type': 'warn',
     'react/destructuring-assignment': 'warn',
     'react/display-name': 'off',
@@ -73,27 +75,25 @@ const reactRules = {
     'react/sort-comp': 'warn',
     'react/style-prop-object': 'warn',
     'react/void-dom-elements-no-children': 'warn',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react-hooks/rules-of-hooks': 'error',
 };
 
 // Next.js rules
 const nextRules = {
-    '@next/next/no-html-link-for-pages': 'warn',
-    '@next/next/no-img-element': 'warn',
-    '@next/next/no-unwanted-polyfillio': 'warn',
-    '@next/next/no-css-tags': 'warn',
-    '@next/next/no-sync-scripts': 'warn',
     '@next/next/google-font-display': 'warn',
     '@next/next/google-font-preconnect': 'warn',
     '@next/next/next-script-for-ga': 'warn',
+    '@next/next/no-css-tags': 'warn',
+    '@next/next/no-html-link-for-pages': 'off',
+    '@next/next/no-img-element': 'warn',
     '@next/next/no-page-custom-font': 'warn',
+    '@next/next/no-sync-scripts': 'warn',
+    '@next/next/no-unwanted-polyfillio': 'warn',
 };
 
 // Perfectionist rules
 const perfectionistRules = {
-    'perfectionist/sort-objects': ['warn', { order: 'asc', type: 'natural' }],
     'perfectionist/sort-imports': ['warn', { order: 'asc', type: 'natural' }],
+    'perfectionist/sort-objects': ['warn', { order: 'asc', type: 'natural' }],
 };
 
 // General JavaScript rules
@@ -113,7 +113,7 @@ const generalRules = {
     'no-label-var': 'warn',
     'no-labels': 'warn',
     'no-lone-blocks': 'warn',
-    'no-mixed-requires': ['warn', { grouping: true, allowCall: false }],
+    'no-mixed-requires': ['warn', { allowCall: false, grouping: true }],
     'no-multi-spaces': 'warn',
     'no-multi-str': 'warn',
     'no-multiple-empty-lines': [

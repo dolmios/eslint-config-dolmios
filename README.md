@@ -13,7 +13,7 @@ This ESLint configuration is designed for use with ESLint v9, which uses a flat 
 ### Setting Up ESLint
 1.  **Create an ESLint Configuration File**: In the root of your project, create a file named  `eslint.config.js`.
 
-2.  **Import and Extend the Configuration**: Add the following content to  `eslint.config.mjs`  to use the  `eslint-config-dolmios`  configuration:
+2.  **Import and Extend the Configuration**: Add the following content to  `eslint.config.js`  to use the  `eslint-config-dolmios`  configuration:
 
 
 ```js
@@ -24,6 +24,30 @@ export default [
   // Add any project-specific overrides here
 ];
 ```
+
+### Features
+
+- **TypeScript Support**: Comprehensive TypeScript linting with strict type checking
+- **React Best Practices**: Rules for React and React Hooks
+- **Accessibility**: A11y rules to ensure your app is accessible
+- **Next.js Optimization**: Includes Next.js Core Web Vitals rules for performance optimization
+- **Code Organization**: Perfectionist plugin for consistent code organization
+- **Modern JavaScript**: Enforces modern JavaScript practices
+
+### Next.js Compatibility
+
+This configuration automatically detects your Next.js project structure and adjusts accordingly:
+
+- **App Router Support**: Works with Next.js App Router projects
+- **Pages Router Support**: Works with Next.js Pages Router projects
+- **Non-Next.js Projects**: Works with regular React projects without Next.js
+
+The configuration automatically detects:
+- If you're using Next.js (by checking for `next.config.js`)
+- If you're using App Router (by checking for an `app` directory)
+- If you're using Pages Router (by checking for `pages` or `src/pages` directories)
+
+Rules like `no-html-link-for-pages` are only enabled when a Pages Router is detected.
 
 ---
 

@@ -28,8 +28,7 @@ export default [
       '**/eslint.config.js',
       '**/eslint.config.mjs',
       '**/eslint.config.cjs',
-      '**/next.config.js',
-      '**/next-sitemap.config.js'
+      '**/next.config.js'
     ],
   },
   {

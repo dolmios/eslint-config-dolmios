@@ -245,7 +245,20 @@
         "requireStringLiterals": false
       }
     ],
+    "@typescript-eslint/ban-ts-comment": [
+      1,
+      {
+        "ts-ignore": "allow-with-description",
+        "minimumDescriptionLength": 3
+      }
+    ],
     "@typescript-eslint/explicit-function-return-type": [
+      1
+    ],
+    "@typescript-eslint/no-explicit-any": [
+      1
+    ],
+    "@typescript-eslint/no-inferrable-types": [
       1
     ],
     "@typescript-eslint/no-non-null-assertion": [
@@ -255,22 +268,9 @@
       1,
       {
         "args": "none",
-        "ignoreRestSiblings": true,
-        "argsIgnorePattern": "^_"
+        "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
       }
-    ],
-    "@typescript-eslint/no-explicit-any": [
-      1
-    ],
-    "@typescript-eslint/ban-ts-comment": [
-      1,
-      {
-        "ts-ignore": "allow-with-description",
-        "minimumDescriptionLength": 3
-      }
-    ],
-    "@typescript-eslint/no-inferrable-types": [
-      1
     ],
     "@typescript-eslint/prefer-as-const": [
       1
@@ -328,6 +328,12 @@
     ],
     "jsx-a11y/scope": [
       1
+    ],
+    "react-hooks/exhaustive-deps": [
+      1
+    ],
+    "react-hooks/rules-of-hooks": [
+      2
     ],
     "react/button-has-type": [
       1
@@ -409,27 +415,6 @@
     "react/void-dom-elements-no-children": [
       1
     ],
-    "react-hooks/exhaustive-deps": [
-      1
-    ],
-    "react-hooks/rules-of-hooks": [
-      2
-    ],
-    "@next/next/no-html-link-for-pages": [
-      1
-    ],
-    "@next/next/no-img-element": [
-      1
-    ],
-    "@next/next/no-unwanted-polyfillio": [
-      1
-    ],
-    "@next/next/no-css-tags": [
-      1
-    ],
-    "@next/next/no-sync-scripts": [
-      1
-    ],
     "@next/next/google-font-display": [
       1
     ],
@@ -439,17 +424,32 @@
     "@next/next/next-script-for-ga": [
       1
     ],
+    "@next/next/no-css-tags": [
+      1
+    ],
+    "@next/next/no-html-link-for-pages": [
+      0
+    ],
+    "@next/next/no-img-element": [
+      1
+    ],
     "@next/next/no-page-custom-font": [
       1
     ],
-    "perfectionist/sort-objects": [
+    "@next/next/no-sync-scripts": [
+      1
+    ],
+    "@next/next/no-unwanted-polyfillio": [
+      1
+    ],
+    "perfectionist/sort-imports": [
       1,
       {
         "order": "asc",
         "type": "natural"
       }
     ],
-    "perfectionist/sort-imports": [
+    "perfectionist/sort-objects": [
       1,
       {
         "order": "asc",
@@ -516,8 +516,8 @@
     "no-mixed-requires": [
       1,
       {
-        "grouping": true,
-        "allowCall": false
+        "allowCall": false,
+        "grouping": true
       }
     ],
     "no-multi-spaces": [
@@ -667,9 +667,7 @@
       "sourceType": "module",
       "ecmaFeatures": {
         "jsx": true
-      },
-      "project": "./tsconfig.json",
-      "tsconfigRootDir": "."
+      }
     },
     "globals": {
       "AbortController": false,
