@@ -650,7 +650,7 @@
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.26.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.26.1",
     "@next/next",
     "perfectionist:perfectionist",
     "react",
@@ -661,7 +661,7 @@
   "languageOptions": {
     "sourceType": "module",
     "ecmaVersion": 2025,
-    "parser": "typescript-eslint/parser@8.26.0",
+    "parser": "typescript-eslint/parser@8.26.1",
     "parserOptions": {
       "ecmaVersion": "latest",
       "sourceType": "module",
