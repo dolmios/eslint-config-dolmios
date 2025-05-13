@@ -173,7 +173,10 @@
       2
     ],
     "no-shadow-restricted-names": [
-      2
+      2,
+      {
+        "reportGlobalThis": false
+      }
     ],
     "no-sparse-arrays": [
       2
@@ -558,7 +561,8 @@
         "allowShortCircuit": false,
         "allowTernary": false,
         "allowTaggedTemplates": false,
-        "enforceForJSX": false
+        "enforceForJSX": false,
+        "ignoreDirectives": false
       }
     ],
     "no-use-before-define": [
@@ -650,9 +654,9 @@
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.26.1",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.32.1",
     "@next/next",
-    "perfectionist:perfectionist",
+    "perfectionist:eslint-plugin-perfectionist@4.13.0",
     "react",
     "react-hooks:eslint-plugin-react-hooks",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2"
@@ -661,7 +665,7 @@
   "languageOptions": {
     "sourceType": "module",
     "ecmaVersion": 2025,
-    "parser": "typescript-eslint/parser@8.26.1",
+    "parser": "typescript-eslint/parser@8.32.1",
     "parserOptions": {
       "ecmaVersion": "latest",
       "sourceType": "module",
@@ -678,6 +682,7 @@
       "addEventListener": false,
       "ai": false,
       "AI": false,
+      "AICreateMonitor": false,
       "AITextSession": false,
       "alert": false,
       "AnalyserNode": false,
@@ -686,6 +691,7 @@
       "AnimationEvent": false,
       "AnimationPlaybackEvent": false,
       "AnimationTimeline": false,
+      "AsyncDisposableStack": false,
       "atob": false,
       "Attr": false,
       "Audio": false,
@@ -762,6 +768,7 @@
       "closed": false,
       "CloseEvent": false,
       "CloseWatcher": false,
+      "CommandEvent": false,
       "Comment": false,
       "CompositionEvent": false,
       "CompressionStream": false,
@@ -785,6 +792,7 @@
       "crypto": false,
       "Crypto": false,
       "CryptoKey": false,
+      "CSPViolationReportBody": false,
       "CSS": false,
       "CSSAnimation": false,
       "CSSConditionRule": false,
@@ -862,7 +870,9 @@
       "DeviceMotionEventRotationRate": false,
       "DeviceOrientationEvent": false,
       "devicePixelRatio": false,
+      "DevicePosture": false,
       "dispatchEvent": false,
+      "DisposableStack": false,
       "document": false,
       "Document": false,
       "DocumentFragment": false,
@@ -921,9 +931,9 @@
       "FileSystemFileEntry": false,
       "FileSystemFileHandle": false,
       "FileSystemHandle": false,
+      "FileSystemObserver": false,
       "FileSystemWritableFileStream": false,
       "find": false,
-      "Float16Array": false,
       "focus": false,
       "FocusEvent": false,
       "FontData": false,
@@ -1060,6 +1070,7 @@
       "HTMLProgressElement": false,
       "HTMLQuoteElement": false,
       "HTMLScriptElement": false,
+      "HTMLSelectedContentElement": false,
       "HTMLSelectElement": false,
       "HTMLSlotElement": false,
       "HTMLSourceElement": false,
@@ -1118,6 +1129,7 @@
       "KeyboardEvent": false,
       "KeyboardLayoutMap": false,
       "KeyframeEffect": false,
+      "LanguageDetector": false,
       "LargestContentfulPaint": false,
       "LaunchParams": false,
       "launchQueue": false,
@@ -1215,6 +1227,7 @@
       "NotifyPaintEvent": false,
       "NotRestoredReasonDetails": false,
       "NotRestoredReasons": false,
+      "Observable": false,
       "OfflineAudioCompletionEvent": false,
       "OfflineAudioContext": false,
       "offscreenBuffering": false,
@@ -1242,6 +1255,7 @@
       "onchange": true,
       "onclick": true,
       "onclose": true,
+      "oncommand": true,
       "oncontentvisibilityautostatechange": true,
       "oncontextlost": true,
       "oncontextmenu": true,
@@ -1435,6 +1449,7 @@
       "RelativeOrientationSensor": false,
       "RemotePlayback": false,
       "removeEventListener": false,
+      "ReportBody": false,
       "reportError": false,
       "ReportingObserver": false,
       "Request": false,
@@ -1446,6 +1461,7 @@
       "ResizeObserverSize": false,
       "resizeTo": false,
       "Response": false,
+      "RestrictionTarget": false,
       "RTCCertificate": false,
       "RTCDataChannel": false,
       "RTCDataChannelEvent": false,
@@ -1506,6 +1522,11 @@
       "ShadowRoot": false,
       "sharedStorage": false,
       "SharedStorage": false,
+      "SharedStorageAppendMethod": false,
+      "SharedStorageClearMethod": false,
+      "SharedStorageDeleteMethod": false,
+      "SharedStorageModifierMethod": false,
+      "SharedStorageSetMethod": false,
       "SharedStorageWorklet": false,
       "SharedWorker": false,
       "showDirectoryPicker": false,
@@ -1537,7 +1558,9 @@
       "StyleSheet": false,
       "StyleSheetList": false,
       "SubmitEvent": false,
+      "Subscriber": false,
       "SubtleCrypto": false,
+      "SuppressedError": false,
       "SVGAElement": false,
       "SVGAngle": false,
       "SVGAnimatedAngle": false,
@@ -1741,6 +1764,7 @@
       "WebTransportSendStream": false,
       "WGSLLanguageFeatures": false,
       "WheelEvent": false,
+      "when": false,
       "window": false,
       "Window": false,
       "WindowControlsOverlay": false,
