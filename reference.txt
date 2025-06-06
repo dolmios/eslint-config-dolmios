@@ -227,7 +227,10 @@
       1
     ],
     "no-useless-escape": [
-      1
+      1,
+      {
+        "allowRegexCharacters": []
+      }
     ],
     "no-with": [
       2
@@ -571,7 +574,10 @@
         "classes": true,
         "functions": true,
         "variables": true,
-        "allowNamedExports": false
+        "allowNamedExports": false,
+        "enums": true,
+        "typedefs": true,
+        "ignoreTypeReferences": true
       }
     ],
     "no-useless-call": [
@@ -654,9 +660,9 @@
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.32.1",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.33.1",
     "@next/next",
-    "perfectionist:eslint-plugin-perfectionist@4.13.0",
+    "perfectionist:eslint-plugin-perfectionist@4.14.0",
     "react",
     "react-hooks:eslint-plugin-react-hooks",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2"
@@ -665,7 +671,7 @@
   "languageOptions": {
     "sourceType": "module",
     "ecmaVersion": 2025,
-    "parser": "typescript-eslint/parser@8.32.1",
+    "parser": "typescript-eslint/parser@8.33.1",
     "parserOptions": {
       "ecmaVersion": "latest",
       "sourceType": "module",
