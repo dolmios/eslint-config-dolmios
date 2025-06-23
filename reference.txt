@@ -660,9 +660,9 @@
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.33.1",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.34.1",
     "@next/next",
-    "perfectionist:eslint-plugin-perfectionist@4.14.0",
+    "perfectionist:eslint-plugin-perfectionist@4.15.0",
     "react",
     "react-hooks:eslint-plugin-react-hooks",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2"
@@ -670,8 +670,8 @@
   "language": "@/js",
   "languageOptions": {
     "sourceType": "module",
-    "ecmaVersion": 2025,
-    "parser": "typescript-eslint/parser@8.33.1",
+    "ecmaVersion": 2026,
+    "parser": "typescript-eslint/parser@8.34.1",
     "parserOptions": {
       "ecmaVersion": "latest",
       "sourceType": "module",
