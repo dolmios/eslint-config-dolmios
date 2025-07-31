@@ -479,7 +479,8 @@
     "no-duplicate-imports": [
       1,
       {
-        "includeExports": false
+        "includeExports": false,
+        "allowSeparateTypeImports": false
       }
     ],
     "no-eq-null": [
@@ -660,7 +661,7 @@
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.34.1",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.38.0",
     "@next/next",
     "perfectionist:eslint-plugin-perfectionist@4.15.0",
     "react",
@@ -671,7 +672,7 @@
   "languageOptions": {
     "sourceType": "module",
     "ecmaVersion": 2026,
-    "parser": "typescript-eslint/parser@8.34.1",
+    "parser": "typescript-eslint/parser@8.38.0",
     "parserOptions": {
       "ecmaVersion": "latest",
       "sourceType": "module",
@@ -768,6 +769,7 @@
       "clearTimeout": false,
       "clientInformation": false,
       "Clipboard": false,
+      "ClipboardChangeEvent": false,
       "ClipboardEvent": false,
       "ClipboardItem": false,
       "close": false,
@@ -790,6 +792,7 @@
       "CookieStoreManager": false,
       "CountQueuingStrategy": false,
       "createImageBitmap": false,
+      "CreateMonitor": false,
       "Credential": false,
       "credentialless": false,
       "CredentialsContainer": false,
@@ -1128,6 +1131,7 @@
       "InputDeviceCapabilities": false,
       "InputDeviceInfo": false,
       "InputEvent": false,
+      "IntegrityViolationReportBody": false,
       "IntersectionObserver": false,
       "IntersectionObserverEntry": false,
       "isSecureContext": false,
@@ -1443,6 +1447,7 @@
       "PushSubscriptionOptions": false,
       "queryLocalFonts": false,
       "queueMicrotask": false,
+      "QuotaExceededError": false,
       "RadioNodeList": false,
       "Range": false,
       "ReadableByteStreamController": false,
@@ -1566,6 +1571,7 @@
       "SubmitEvent": false,
       "Subscriber": false,
       "SubtleCrypto": false,
+      "Summarizer": false,
       "SuppressedError": false,
       "SVGAElement": false,
       "SVGAngle": false,
@@ -1696,6 +1702,7 @@
       "TransformStream": false,
       "TransformStreamDefaultController": false,
       "TransitionEvent": false,
+      "Translator": false,
       "TreeWalker": false,
       "TrustedHTML": false,
       "TrustedScript": false,
@@ -1727,6 +1734,8 @@
       "VideoEncoder": false,
       "VideoFrame": false,
       "VideoPlaybackQuality": false,
+      "viewport": false,
+      "Viewport": false,
       "ViewTimeline": false,
       "ViewTransition": false,
       "ViewTransitionTypeSet": false,
