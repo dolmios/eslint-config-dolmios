@@ -254,8 +254,7 @@
     "@typescript-eslint/ban-ts-comment": [
       1,
       {
-        "ts-ignore": "allow-with-description",
-        "minimumDescriptionLength": 3
+        "ts-ignore": "allow-with-description"
       }
     ],
     "@typescript-eslint/explicit-function-return-type": [
@@ -661,7 +660,7 @@
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.38.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.41.0",
     "@next/next",
     "perfectionist:eslint-plugin-perfectionist@4.15.0",
     "react",
@@ -672,7 +671,7 @@
   "languageOptions": {
     "sourceType": "module",
     "ecmaVersion": 2026,
-    "parser": "typescript-eslint/parser@8.38.0",
+    "parser": "typescript-eslint/parser@8.41.0",
     "parserOptions": {
       "ecmaVersion": "latest",
       "sourceType": "module",
