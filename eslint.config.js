@@ -68,7 +68,7 @@ export default [
     languageOptions: {
       parserOptions: {
         project: './tsconfig.json',
-        tsconfigRootDir: '.',
+        tsconfigRootDir: process.cwd(),
       },
     },
     rules: {
