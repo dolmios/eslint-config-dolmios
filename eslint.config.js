@@ -1,4 +1,6 @@
 // eslint.config.js
+// ESLint v9 Flat Config for TypeScript, React, Next.js projects
+// Updated for ESLint 9.39, TypeScript ESLint 8.50, React Hooks 7.0, Next.js 16
 import js from '@eslint/js';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
@@ -11,7 +13,10 @@ import customRules from './rules.js';
 import globals from 'globals';
 
 export default [
+  // Base JavaScript recommended rules
   js.configs.recommended,
+
+  // Global ignores
   {
     ignores: [
       '**/node_modules/**',
@@ -31,6 +36,8 @@ export default [
       '**/next.config.js'
     ],
   },
+
+  // Main configuration for all file types
   {
     files: ['**/*.js', '**/*.jsx', '**/*.mjs', '**/*.cjs', '**/*.ts', '**/*.tsx'],
     languageOptions: {
@@ -63,6 +70,8 @@ export default [
     },
     rules: customRules,
   },
+
+  // TypeScript-specific configuration with project references
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
