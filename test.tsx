@@ -1,6 +1,12 @@
 // test.tsx - TypeScript test file for type-aware rules
 
+// Import sorting tests (perfectionist/sort-imports)
+// External imports - type imports first, then value imports
+import type { ChangeEvent, JSX } from "react";
 import React, { createContext, useContext } from "react";
+
+// Side-effect imports (should be last)
+import "./test-styles.css";
 
 // Type-aware rule tests
 

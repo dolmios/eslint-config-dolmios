@@ -141,7 +141,25 @@ const nextRules = {
 };
 
 const perfectionistRules = {
-    'perfectionist/sort-imports': ['warn', { order: 'asc', type: 'natural' }],
+    'perfectionist/sort-imports': [
+        'warn',
+        {
+            order: 'asc',
+            type: 'natural',
+            groups: [
+                'builtin',
+                'external',
+                'internal',
+                'parent',
+                'sibling',
+                'index',
+                'side-effect',
+                'style',
+            ],
+            newlinesBetween: 1,
+            internalPattern: ['^@/'],
+        },
+    ],
     'perfectionist/sort-objects': ['warn', { order: 'asc', type: 'natural' }],
 };
 
