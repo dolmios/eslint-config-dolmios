@@ -12,6 +12,7 @@ const typescriptRules = {
         { args: 'none', argsIgnorePattern: '^_', ignoreRestSiblings: true },
     ],
     '@typescript-eslint/prefer-as-const': 'warn',
+    'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
     'no-unused-vars': 'off',
 };
 

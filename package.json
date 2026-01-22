@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-dolmios",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "A simple ESLint config with Prettier and a couple TSConfig setups",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "bugs": {
@@ -11,6 +11,7 @@
     "@next/eslint-plugin-next": "^16.1.4",
     "@typescript-eslint/eslint-plugin": "^8.53.1",
     "@typescript-eslint/parser": "^8.53.1",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-perfectionist": "^5.4.0",
     "eslint-plugin-react": "^7.37.5",
