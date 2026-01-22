@@ -261,9 +261,11 @@
       }
     ],
     "@typescript-eslint/consistent-type-imports": [
-      1,
+      2,
       {
-        "prefer": "type-imports"
+        "prefer": "type-imports",
+        "fixStyle": "separate-type-imports",
+        "disallowTypeAnnotations": false
       }
     ],
     "@typescript-eslint/explicit-function-return-type": [

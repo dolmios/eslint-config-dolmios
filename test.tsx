@@ -3,6 +3,7 @@
 // Import sorting tests (perfectionist/sort-imports)
 // External imports - type imports first, then value imports
 import type { ChangeEvent, JSX } from "react";
+
 import React, { createContext, useContext } from "react";
 
 // Side-effect imports (should be last)
@@ -18,6 +19,7 @@ fetchData(); // Error: floating promise
 
 // @typescript-eslint/await-thenable - await non-promise
 const notAPromise = 42;
+
 await notAPromise; // Error: not thenable
 
 // @typescript-eslint/no-misused-promises - promise in wrong context
@@ -25,12 +27,13 @@ function Component(): React.JSX.Element {
   const handleClick = async (): Promise<void> => {
     await fetchData();
   };
+
   return <button onClick={handleClick}>Click</button>; // Error: promise misuse
 }
 
 // @typescript-eslint/restrict-plus-operands - unsafe addition
-const num: number = 1;
-const str: string = "2";
+const num = 1;
+const str = "2";
 const result = num + str; // Error: unsafe addition
 
 // @typescript-eslint/restrict-template-expressions - unsafe template
@@ -42,6 +45,7 @@ class CustomClass {
   value = 123;
 }
 const custom = new CustomClass();
+
 custom.toString(); // Error: no-base-to-string
 
 // @typescript-eslint/switch-exhaustiveness-check - missing enum case
@@ -65,6 +69,7 @@ function safeFunction(value: string): void {
   console.log(value);
 }
 const unsafeValue: unknown = "test";
+
 safeFunction(unsafeValue); // Error: unsafe argument
 
 // @typescript-eslint/no-unsafe-assignment - unsafe assignment
@@ -73,6 +78,7 @@ const typed: { name: string } = unsafeData; // Error: unsafe assignment
 
 // @typescript-eslint/no-unsafe-call - unsafe function call
 const unsafeFn: unknown = () => console.log("test");
+
 unsafeFn(); // Error: unsafe call
 
 // @typescript-eslint/no-unsafe-member-access - unsafe property access
@@ -82,6 +88,7 @@ const value = unsafeObj.prop; // Error: unsafe member access
 // @typescript-eslint/no-unsafe-return - unsafe return
 function getValue(): string {
   const data: unknown = "test";
+
   return data; // Error: unsafe return
 }
 
@@ -92,34 +99,38 @@ setTimeout("console.log('test')", 100); // Error: implied eval
 function voidFunction(): void {
   console.log("test");
 }
-const voidResult = void voidFunction(); // Error: confusing void expression
+const voidResult = voidFunction(); // Error: confusing void expression
 
 // @typescript-eslint/no-meaningless-void-operator - meaningless void
 const num = 42;
+
 void num; // Error: meaningless void
 
 // @typescript-eslint/no-unnecessary-boolean-literal-compare
 const isTrue = true;
-if (isTrue === true) {
+
+if (isTrue) {
   // Error: unnecessary boolean literal compare
 }
 
 // @typescript-eslint/no-unnecessary-condition - always true/false
 const alwaysTrue: true = true;
+
 if (alwaysTrue) {
   // Error: unnecessary condition
 }
 
 // @typescript-eslint/no-unnecessary-type-assertion - unnecessary 'as'
 const str = "hello";
-const typedStr = str as string; // Error: unnecessary assertion
+const typedStr = str; // Error: unnecessary assertion
 
 // @typescript-eslint/no-redundant-type-constituents - redundant union
 type Redundant = string | "hello"; // Error: redundant type
 
 // @typescript-eslint/prefer-includes - use includes instead of indexOf
 const arr = [1, 2, 3];
-if (arr.indexOf(2) !== -1) {
+
+if (arr.includes(2)) {
   // Error: prefer includes
 }
 
@@ -133,7 +144,8 @@ const nested = obj && obj.nested && obj.nested.value; // Error: prefer optional 
 
 // @typescript-eslint/prefer-string-starts-ends-with - use startsWith/endsWith
 const text = "hello world";
-if (text.match(/^hello/)) {
+
+if (/^hello/.exec(text)) {
   // Error: prefer startsWith
 }
 
@@ -157,6 +169,7 @@ function Provider(): React.JSX.Element {
 
 function Child(): React.JSX.Element {
   const context = useContext(MyContext);
+
   return <div>{context.value}</div>;
 }
 
@@ -185,6 +198,7 @@ new Promise((resolve) => {
 
 // require-atomic-updates - race condition
 let counter = 0;
+
 async function increment(): Promise<void> {
   counter = counter + 1; // Error: atomic update needed
 }
@@ -212,6 +226,7 @@ interface Empty {} // Error: empty object type
 
 // @typescript-eslint/no-for-in-array - for-in on array
 const array = [1, 2, 3];
+
 for (const index in array) {
   // Error: for-in on array
   console.log(array[index]);

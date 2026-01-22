@@ -1,6 +1,6 @@
 const typescriptRules = {
     '@typescript-eslint/ban-ts-comment': ['warn', { 'ts-ignore': 'allow-with-description' }],
-    '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports' }],
+    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', fixStyle: 'separate-type-imports', disallowTypeAnnotations: false }],
     '@typescript-eslint/explicit-function-return-type': 'warn',
     '@typescript-eslint/no-empty-object-type': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
