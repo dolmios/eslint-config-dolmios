@@ -34,15 +34,15 @@ export const typescriptTypeAwareRules = {
     '@typescript-eslint/no-unsafe-return': 'error',
     '@typescript-eslint/no-redundant-type-constituents': 'warn',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'warn',
-    '@typescript-eslint/no-unnecessary-condition': 'warn',
+    '@typescript-eslint/no-unnecessary-condition': 'off', // Too noisy, often false positives with complex types
     '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
     '@typescript-eslint/prefer-includes': 'warn',
-    '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+    '@typescript-eslint/prefer-nullish-coalescing': 'off', // Very common pattern, too noisy for existing codebases
     '@typescript-eslint/prefer-optional-chain': 'warn',
     '@typescript-eslint/prefer-regexp-exec': 'warn',
     '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
     '@typescript-eslint/restrict-plus-operands': 'error',
-    '@typescript-eslint/restrict-template-expressions': 'error',
+    '@typescript-eslint/restrict-template-expressions': 'off', // Too strict, breaks styled-components and many common patterns
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
 };
 
@@ -158,9 +158,9 @@ const generalRules = {
     'consistent-this': ['warn', 'self'],
     'eqeqeq': 'warn',
     'no-alert': 'error',
-    'no-await-in-loop': 'warn',
+    'no-await-in-loop': 'warn', // Performance concern - sequential processing may be intentional (rate limits, dependencies)
     'no-console': 'warn',
-    'no-duplicate-imports': 'warn',
+    'no-duplicate-imports': ['warn', { allowSeparateTypeImports: true }],
     'no-empty': 'warn',
     'no-eq-null': 'warn',
     'no-eval': 'error',
