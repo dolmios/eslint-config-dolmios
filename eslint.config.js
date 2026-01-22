@@ -9,7 +9,7 @@ import nextPlugin from '@next/eslint-plugin-next';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import perfectionist from 'eslint-plugin-perfectionist';
-import customRules from './rules.js';
+import customRules, { typescriptTypeAwareRules } from './rules.js';
 import globals from 'globals';
 
 export default [
@@ -80,7 +80,6 @@ export default [
         tsconfigRootDir: process.cwd(),
       },
     },
-    rules: {
-    },
+    rules: typescriptTypeAwareRules,
   },
 ];

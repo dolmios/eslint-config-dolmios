@@ -1,6 +1,6 @@
-// test.js
+// test.js - Comprehensive test file for ESLint rules
 
-import React, { useState } from "react";
+import React, { useState, createContext, useContext } from "react";
 import { useEffect } from "react"; // Duplicate import
 import { Link } from "next/link"; // Incorrect import path for Next.js links
 import styles from "./nonexistent.module.css"; // Unused import
@@ -81,6 +81,40 @@ function TestComponent() {
   // No-alert rule trigger
   alert("This is an alert");
 
+  // no-await-in-loop rule trigger
+  async function processItems(items) {
+    for (const item of items) {
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+  }
+
+  // no-promise-executor-return rule trigger
+  new Promise((resolve) => {
+    return resolve("done");
+  });
+
+  // require-atomic-updates rule trigger
+  let counter = 0;
+  async function increment() {
+    counter = counter + 1;
+  }
+
+  // no-implicit-coercion rule trigger
+  const bool = !!count;
+  const num = +"123";
+
+  // no-new-wrappers rule trigger
+  const strWrapper = new String("test");
+  const numWrapper = new Number(42);
+
+  // no-throw-literal rule trigger
+  function throwError() {
+    throw "error";
+  }
+
+  // prefer-promise-reject-errors rule trigger
+  Promise.reject("error");
+
   // JSX props not sorted
   return (
     <div className="container" id="main" role="main">
@@ -107,8 +141,34 @@ function TestComponent() {
 
       {/* JSX-a11y/no-autofocus rule trigger */}
       <input autoFocus />
+
+      {/* react/jsx-no-constructed-context-values rule trigger */}
+      <ContextProvider />
     </div>
   );
+}
+
+// react/jsx-no-constructed-context-values test
+const TestContext = createContext({ value: "" });
+
+function ContextProvider() {
+  return (
+    <TestContext.Provider value={{ value: "test" }}>
+      {/* Error: constructed context value */}
+      <ContextConsumer />
+    </TestContext.Provider>
+  );
+}
+
+function ContextConsumer() {
+  const context = useContext(TestContext);
+  return <div>{context.value}</div>;
+}
+
+// react/no-object-type-as-default-prop test
+function ComponentWithDefault({ config = { key: "value" } }) {
+  // Error: object type as default prop
+  return <div>{config.key}</div>;
 }
 
 // Class with no-useless-constructor
@@ -126,5 +186,15 @@ class TestClass {
   };
 }
 
+// Additional test cases for general JavaScript rules
+
+// prefer-nullish-coalescing pattern (will be caught by TypeScript rule in TS files)
+const nullValue = null;
+const defaultValue = nullValue || "default";
+
+// prefer-optional-chain pattern (will be caught by TypeScript rule in TS files)
+const nestedObj = { nested: { value: "test" } };
+const nestedValue = nestedObj && nestedObj.nested && nestedObj.nested.value;
+
 // No default export
-export { TestComponent, TestClass };
+export { TestComponent, TestClass, ContextProvider, ComponentWithDefault };

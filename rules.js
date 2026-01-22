@@ -3,8 +3,11 @@
 // TypeScript specific rules
 const typescriptRules = {
     '@typescript-eslint/ban-ts-comment': ['warn', { 'ts-ignore': 'allow-with-description' }],
+    '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports' }],
     '@typescript-eslint/explicit-function-return-type': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
+    '@typescript-eslint/no-for-in-array': 'warn',
     '@typescript-eslint/no-inferrable-types': 'warn',
     '@typescript-eslint/no-non-null-assertion': 'warn',
     '@typescript-eslint/no-unused-vars': [
@@ -15,9 +18,42 @@ const typescriptRules = {
     'no-unused-vars': 'off',
 };
 
+// TypeScript type-aware rules (require project: './tsconfig.json' in parserOptions)
+export const typescriptTypeAwareRules = {
+    '@typescript-eslint/await-thenable': 'error',
+    '@typescript-eslint/no-base-to-string': 'error',
+    '@typescript-eslint/no-confusing-void-expression': 'warn',
+    '@typescript-eslint/no-floating-promises': 'error',
+    '@typescript-eslint/no-meaningless-void-operator': 'warn',
+    '@typescript-eslint/no-implied-eval': 'error',
+    '@typescript-eslint/no-misused-promises': 'error',
+    '@typescript-eslint/no-unsafe-argument': 'error',
+    '@typescript-eslint/no-unsafe-assignment': 'error',
+    '@typescript-eslint/no-unsafe-call': 'error',
+    '@typescript-eslint/no-unsafe-member-access': 'error',
+    '@typescript-eslint/no-unsafe-return': 'error',
+    '@typescript-eslint/no-redundant-type-constituents': 'warn',
+    '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'warn',
+    '@typescript-eslint/no-unnecessary-condition': 'warn',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
+    '@typescript-eslint/prefer-includes': 'warn',
+    '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+    '@typescript-eslint/prefer-optional-chain': 'warn',
+    '@typescript-eslint/prefer-regexp-exec': 'warn',
+    '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
+    '@typescript-eslint/restrict-plus-operands': 'error',
+    '@typescript-eslint/restrict-template-expressions': 'error',
+    '@typescript-eslint/switch-exhaustiveness-check': 'error',
+};
+
 // Accessibility rules
 const a11yRules = {
+    'jsx-a11y/alt-text': 'warn',
+    'jsx-a11y/anchor-is-valid': 'warn',
+    'jsx-a11y/aria-props': 'warn',
+    'jsx-a11y/aria-proptypes': 'warn',
     'jsx-a11y/aria-role': 'warn',
+    'jsx-a11y/aria-unsupported-elements': 'warn',
     'jsx-a11y/autocomplete-valid': 'warn',
     'jsx-a11y/click-events-have-key-events': 'warn',
     'jsx-a11y/heading-has-content': 'warn',
@@ -34,6 +70,8 @@ const a11yRules = {
     'jsx-a11y/no-distracting-elements': 'warn',
     'jsx-a11y/no-redundant-roles': 'warn',
     'jsx-a11y/no-static-element-interactions': 'warn',
+    'jsx-a11y/role-has-required-aria-props': 'warn',
+    'jsx-a11y/role-supports-aria-props': 'warn',
     'jsx-a11y/scope': 'warn',
 };
 
@@ -46,10 +84,14 @@ const reactRules = {
     'react/display-name': 'off',
     'react/jsx-boolean-value': 'warn',
     'react/jsx-handler-names': 'warn',
+    'react/jsx-key': 'error',
     'react/jsx-no-bind': [
         'warn',
         { allowArrowFunctions: true, ignoreRefs: true },
     ],
+    'react/jsx-no-constructed-context-values': 'warn',
+    'react/jsx-no-leaked-render': 'warn',
+    'react/jsx-no-target-blank': 'warn',
     'react/jsx-no-useless-fragment': 'warn',
     'react/jsx-pascal-case': 'warn',
     'react/jsx-sort-props': [
@@ -64,13 +106,25 @@ const reactRules = {
         }
     ],
     'react/no-access-state-in-setstate': 'warn',
+    'react/no-array-index-key': 'warn',
     'react/no-arrow-function-lifecycle': 'warn',
+    'react/no-children-prop': 'warn',
     'react/no-danger': 'warn',
+    'react/no-danger-with-children': 'warn',
+    'react/no-deprecated': 'warn',
+    'react/no-direct-mutation-state': 'warn',
+    'react/no-find-dom-node': 'warn',
     'react/no-invalid-html-attribute': 'warn',
+    'react/no-object-type-as-default-prop': 'warn',
+    'react/no-render-return-value': 'warn',
     'react/no-set-state': 'warn',
+    'react/no-string-refs': 'warn',
     'react/no-this-in-sfc': 'warn',
     'react/no-typos': 'warn',
+    'react/no-unescaped-entities': 'warn',
+    'react/no-unknown-property': 'warn',
     'react/no-unused-state': 'warn',
+    'react/no-unstable-nested-components': 'warn',
     'react/self-closing-comp': 'warn',
     'react/sort-comp': 'warn',
     'react/style-prop-object': 'warn',
@@ -83,14 +137,17 @@ const nextRules = {
     '@next/next/google-font-preconnect': 'warn',
     '@next/next/next-script-for-ga': 'warn',
     '@next/next/no-css-tags': 'warn',
+    '@next/next/no-head-element': 'warn',
+    '@next/next/no-head-import-in-document': 'warn',
     '@next/next/no-html-link-for-pages': 'off',
     '@next/next/no-img-element': 'warn',
     '@next/next/no-page-custom-font': 'warn',
+    '@next/next/no-styled-jsx-in-document': 'warn',
     '@next/next/no-sync-scripts': 'warn',
     '@next/next/no-unwanted-polyfillio': 'warn',
 };
 
-// Perfectionist rules
+// Perfectionist rules - takes priority for all sorting
 const perfectionistRules = {
     'perfectionist/sort-imports': ['warn', { order: 'asc', type: 'natural' }],
     'perfectionist/sort-objects': ['warn', { order: 'asc', type: 'natural' }],
@@ -100,14 +157,16 @@ const perfectionistRules = {
 const generalRules = {
     'consistent-this': ['warn', 'self'],
     'eqeqeq': 'warn',
-    'no-alert': 'warn',
+    'no-alert': 'error',
+    'no-await-in-loop': 'warn',
     'no-console': 'warn',
     'no-duplicate-imports': 'warn',
     'no-empty': 'warn',
     'no-eq-null': 'warn',
-    'no-eval': 'warn',
+    'no-eval': 'error',
     'no-extra-bind': 'warn',
     'no-extra-label': 'warn',
+    'no-implicit-coercion': 'warn',
     'no-invalid-this': 'warn',
     'no-iterator': 'warn',
     'no-label-var': 'warn',
@@ -121,9 +180,16 @@ const generalRules = {
         { max: 1, maxBOF: 0, maxEOF: 0 },
     ],
     'no-new': 'warn',
+    'no-new-wrappers': 'warn',
     'no-octal-escape': 'warn',
+    'no-param-reassign': ['warn', { props: false }],
+    'no-promise-executor-return': 'warn',
     'no-proto': 'warn',
+    // Note: no-restricted-imports and no-restricted-syntax require configuration to be effective
+    // They can be configured per-project to restrict specific imports or syntax patterns
+    // Removed from default config - add back per-project if needed with specific restrictions
     'no-template-curly-in-string': 'warn',
+    'no-throw-literal': 'warn',
     'no-unreachable-loop': 'warn',
     'no-unused-expressions': 'warn',
     'no-unused-labels': 'warn',
@@ -143,7 +209,10 @@ const generalRules = {
         { blankLine: 'always', next: '*', prev: ['const', 'let', 'var'] },
         { blankLine: 'any', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var'] },
     ],
+    'prefer-const': 'warn',
     'prefer-destructuring': ['warn', { array: true, object: true }],
+    'prefer-promise-reject-errors': 'warn',
+    'require-atomic-updates': 'warn',
     'yoda': 'warn',
 };
 
@@ -154,12 +223,13 @@ const prettierRules = {
 };
 
 // Export all rule groups combined
+// Note: perfectionistRules should come after generalRules to take priority
 export default {
     ...typescriptRules,
     ...a11yRules,
     ...reactRules,
     ...nextRules,
-    ...perfectionistRules,
     ...generalRules,
     ...prettierRules,
+    ...perfectionistRules, // Perfectionist takes priority for sorting
 };
