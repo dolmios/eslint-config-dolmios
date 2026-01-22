@@ -25,6 +25,7 @@ new Function("return this");
 const octalEscape = "Copyright \xA9";
 
 // Yoda condition
+let count = 0;
 if (42 === count) {
   // Do something
 }
@@ -95,7 +96,7 @@ function TestComponent() {
 
   // require-atomic-updates rule trigger
   let counter = 0;
-  async function increment() {
+  async function incrementCounter() {
     counter = counter + 1;
   }
 
