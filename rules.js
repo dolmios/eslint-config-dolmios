@@ -12,7 +12,7 @@ const typescriptRules = {
         { args: 'none', argsIgnorePattern: '^_', ignoreRestSiblings: true },
     ],
     '@typescript-eslint/prefer-as-const': 'warn',
-    'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
+    'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level'],
     'no-unused-vars': 'off',
 };
 
@@ -71,59 +71,37 @@ const a11yRules = {
     'jsx-a11y/scope': 'warn',
 };
 
+// Overrides to @eslint-react recommended config.
+// The recommended config is spread in eslint.config.js and provides ~60 rules.
+// Here we only override rules where we want a different severity.
 const reactRules = {
+    // React Hooks (eslint-plugin-react-hooks — not part of @eslint-react)
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
-    'react/button-has-type': 'warn',
-    'react/destructuring-assignment': 'warn',
-    'react/display-name': 'off',
-    'react/jsx-boolean-value': 'warn',
-    'react/jsx-handler-names': 'warn',
-    'react/jsx-key': 'error',
-    'react/jsx-no-bind': [
-        'warn',
-        { allowArrowFunctions: true, ignoreRefs: true },
-    ],
-    'react/jsx-no-constructed-context-values': 'warn',
-    'react/jsx-no-leaked-render': 'off',
-    'react/jsx-no-target-blank': 'warn',
-    'react/jsx-no-useless-fragment': 'warn',
-    'react/jsx-pascal-case': 'warn',
-    'react/jsx-sort-props': [
-        'warn',
-        {
-            'callbacksLast': true,
-            'ignoreCase': true,
-            'noSortAlphabetically': false,
-            'reservedFirst': true,
-            'shorthandFirst': false,
-            'shorthandLast': false,
-        }
-    ],
-    'react/no-access-state-in-setstate': 'warn',
-    'react/no-array-index-key': 'off',
-    'react/no-arrow-function-lifecycle': 'warn',
-    'react/no-children-prop': 'warn',
-    'react/no-danger': 'warn',
-    'react/no-danger-with-children': 'warn',
-    'react/no-deprecated': 'warn',
-    'react/no-direct-mutation-state': 'warn',
-    'react/no-find-dom-node': 'warn',
-    'react/no-invalid-html-attribute': 'warn',
-    'react/no-object-type-as-default-prop': 'off',
-    'react/no-render-return-value': 'warn',
-    'react/no-set-state': 'warn',
-    'react/no-string-refs': 'warn',
-    'react/no-this-in-sfc': 'warn',
-    'react/no-typos': 'warn',
-    'react/no-unescaped-entities': 'warn',
-    'react/no-unknown-property': 'warn',
-    'react/no-unstable-nested-components': ['warn', { allowAsProps: true }],
-    'react/no-unused-state': 'warn',
-    'react/self-closing-comp': 'warn',
-    'react/sort-comp': 'warn',
-    'react/style-prop-object': 'warn',
-    'react/void-dom-elements-no-children': 'warn',
+    // Relax recommended errors to warnings for a less disruptive DX
+    '@eslint-react/no-access-state-in-setstate': 'warn',
+    '@eslint-react/no-array-index-key': 'off',
+    '@eslint-react/no-children-count': 'off',
+    '@eslint-react/no-children-for-each': 'off',
+    '@eslint-react/no-children-map': 'off',
+    '@eslint-react/no-children-only': 'off',
+    '@eslint-react/no-children-to-array': 'off',
+    '@eslint-react/no-clone-element': 'off',
+    '@eslint-react/no-context-provider': 'off',
+    '@eslint-react/no-forward-ref': 'off',
+    '@eslint-react/no-leaked-conditional-rendering': 'off',
+    '@eslint-react/no-missing-component-display-name': 'off',
+    '@eslint-react/no-nested-component-definitions': 'warn',
+    '@eslint-react/no-nested-lazy-component-declarations': 'warn',
+    '@eslint-react/no-use-context': 'off',
+    '@eslint-react/no-useless-fragment': 'warn',
+    '@eslint-react/prefer-destructuring-assignment': 'warn',
+    // DOM overrides
+    '@eslint-react/dom/no-dangerously-set-innerhtml': 'warn',
+    '@eslint-react/dom/no-unsafe-target-blank': 'warn',
+    '@eslint-react/dom/no-unknown-property': 'warn',
+    // RSC — disable by default as not all projects use RSC
+    '@eslint-react/rsc/function-definition': 'off',
 };
 
 const nextRules = {
@@ -167,6 +145,7 @@ const perfectionistRules = {
             internalPattern: ['^@/'],
         },
     ],
+    'perfectionist/sort-jsx-props': ['warn', { order: 'asc', type: 'natural' }],
     'perfectionist/sort-objects': ['warn', { order: 'asc', type: 'natural' }],
 };
 
@@ -176,7 +155,7 @@ const generalRules = {
     'no-alert': 'error',
     'no-await-in-loop': 'off',
     'no-console': 'warn',
-    'import/no-duplicates': ['error', { 'prefer-inline': false }],
+    'import-x/no-duplicates': ['error', { 'prefer-inline': false }],
     'no-duplicate-imports': 'off',
     'no-empty': 'warn',
     'no-eq-null': 'warn',
