@@ -10,19 +10,16 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext"],
     "target": "es2022",
     "allowJs": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "isolatedModules": true
   },
   "display": "dolmios"
 }

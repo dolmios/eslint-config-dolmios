@@ -1,7 +1,10 @@
 const typescriptRules = {
     '@typescript-eslint/ban-ts-comment': ['warn', { 'ts-ignore': 'allow-with-description' }],
     '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', fixStyle: 'separate-type-imports', disallowTypeAnnotations: false }],
-    '@typescript-eslint/explicit-function-return-type': 'warn',
+    '@typescript-eslint/explicit-function-return-type': [
+        'warn',
+        { allowExpressions: true, allowHigherOrderFunctions: true, allowTypedFunctionExpressions: true },
+    ],
     '@typescript-eslint/no-empty-object-type': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/no-for-in-array': 'warn',
@@ -20,10 +23,10 @@ export const typescriptTypeAwareRules = {
     '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/no-base-to-string': 'off',
     '@typescript-eslint/no-confusing-void-expression': 'off',
-    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-floating-promises': ['warn', { checkThenables: true }],
     '@typescript-eslint/no-implied-eval': 'error',
     '@typescript-eslint/no-meaningless-void-operator': 'warn',
-    '@typescript-eslint/no-misused-promises': 'off',
+    '@typescript-eslint/no-misused-promises': ['warn', { checksVoidReturn: { attributes: false } }],
     '@typescript-eslint/no-redundant-type-constituents': 'warn',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'warn',
     '@typescript-eslint/no-unnecessary-condition': 'off',
@@ -35,7 +38,7 @@ export const typescriptTypeAwareRules = {
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/prefer-includes': 'warn',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
-    '@typescript-eslint/prefer-optional-chain': 'off',
+    '@typescript-eslint/prefer-optional-chain': 'warn',
     '@typescript-eslint/prefer-regexp-exec': 'warn',
     '@typescript-eslint/prefer-string-starts-ends-with': 'off',
     '@typescript-eslint/restrict-plus-operands': 'error',
@@ -78,9 +81,15 @@ const reactRules = {
     // React Hooks (eslint-plugin-react-hooks — not part of @eslint-react)
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
+    // @eslint-react's own deps checker (v5) — more aggressive than react-hooks/exhaustive-deps
+    '@eslint-react/exhaustive-deps': 'warn',
+    // Correctness rules surfaced by @eslint-react v5 recommended — kept as errors
+    '@eslint-react/static-components': 'error',
+    '@eslint-react/unsupported-syntax': 'error',
     // Relax recommended errors to warnings for a less disruptive DX
     '@eslint-react/no-access-state-in-setstate': 'warn',
-    '@eslint-react/no-array-index-key': 'off',
+    // Flags key={i} in lists; tolerable on skeletons/immutable lists, useful signal on reorderable ones
+    '@eslint-react/no-array-index-key': 'warn',
     '@eslint-react/no-children-count': 'off',
     '@eslint-react/no-children-for-each': 'off',
     '@eslint-react/no-children-map': 'off',
@@ -89,19 +98,26 @@ const reactRules = {
     '@eslint-react/no-clone-element': 'off',
     '@eslint-react/no-context-provider': 'off',
     '@eslint-react/no-forward-ref': 'off',
+    // ~100% false-positive rate on TS-typed JSX-node guards (icon, children, footer)
     '@eslint-react/no-leaked-conditional-rendering': 'off',
     '@eslint-react/no-missing-component-display-name': 'off',
     '@eslint-react/no-nested-component-definitions': 'warn',
     '@eslint-react/no-nested-lazy-component-declarations': 'warn',
     '@eslint-react/no-use-context': 'off',
-    '@eslint-react/no-useless-fragment': 'warn',
-    '@eslint-react/prefer-destructuring-assignment': 'warn',
-    // DOM overrides
-    '@eslint-react/dom/no-dangerously-set-innerhtml': 'warn',
-    '@eslint-react/dom/no-unsafe-target-blank': 'warn',
-    '@eslint-react/dom/no-unknown-property': 'warn',
+    // Standard React pattern for syncing state from props/data (v5 renamed from hooks-extra/no-direct-set-state-in-use-effect)
+    '@eslint-react/set-state-in-effect': 'off',
+    // Flags trivial initializations with no measurable perf benefit (v5 renamed from prefer-use-state-lazy-initialization)
+    '@eslint-react/use-state': 'off',
+    // JSX overrides (v5 renamed no-useless-fragment -> jsx-no-useless-fragment)
+    '@eslint-react/jsx-no-useless-fragment': 'warn',
+    // Literal '$' rendering as JSX text — usually a typo'd template literal
+    '@eslint-react/jsx-no-leaked-dollar': 'warn',
+    // DOM overrides (v5 uses hyphens instead of slashes)
+    '@eslint-react/dom-no-dangerously-set-innerhtml': 'warn',
+    '@eslint-react/dom-no-unknown-property': 'warn',
+    '@eslint-react/dom-no-unsafe-target-blank': 'warn',
     // RSC — disable by default as not all projects use RSC
-    '@eslint-react/rsc/function-definition': 'off',
+    '@eslint-react/rsc-function-definition': 'off',
 };
 
 const nextRules = {
@@ -112,7 +128,7 @@ const nextRules = {
     '@next/next/no-head-element': 'warn',
     '@next/next/no-head-import-in-document': 'warn',
     '@next/next/no-html-link-for-pages': 'off',
-    '@next/next/no-img-element': 'warn',
+    '@next/next/no-img-element': 'off',
     '@next/next/no-page-custom-font': 'warn',
     '@next/next/no-styled-jsx-in-document': 'warn',
     '@next/next/no-sync-scripts': 'warn',
@@ -151,14 +167,18 @@ const perfectionistRules = {
 
 const generalRules = {
     'consistent-this': ['warn', 'self'],
-    'eqeqeq': 'warn',
+    'eqeqeq': ['warn', 'always', { null: 'ignore' }],
     'no-alert': 'error',
     'no-await-in-loop': 'off',
-    'no-console': 'warn',
+    'no-console': 'error',
+    'import-x/no-anonymous-default-export': 'off',
+    'import-x/no-cycle': ['warn', { ignoreExternal: true }],
     'import-x/no-duplicates': ['error', { 'prefer-inline': false }],
+    'import-x/no-named-as-default': 'off',
+    'import-x/no-named-as-default-member': 'off',
     'no-duplicate-imports': 'off',
     'no-empty': 'warn',
-    'no-eq-null': 'warn',
+    'no-eq-null': 'off',
     'no-eval': 'error',
     'no-extra-bind': 'warn',
     'no-extra-label': 'warn',
@@ -203,7 +223,7 @@ const generalRules = {
         { blankLine: 'any', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var'] },
     ],
     'prefer-const': 'warn',
-    'prefer-destructuring': ['warn', { array: true, object: true }],
+    'prefer-destructuring': ['warn', { array: false, object: true }],
     'prefer-promise-reject-errors': 'warn',
     'require-atomic-updates': 'warn',
     'yoda': 'warn',

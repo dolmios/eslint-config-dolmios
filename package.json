@@ -1,28 +1,39 @@
 {
   "name": "eslint-config-dolmios",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "A simple ESLint config with Prettier and a couple TSConfig setups",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "bugs": {
     "url": "https://github.com/dolmios/eslint-config-dolmios/issues"
   },
   "dependencies": {
-    "@eslint/js": "^10.0.0",
-    "@next/eslint-plugin-next": "^16.1.6",
-    "@typescript-eslint/eslint-plugin": "^8.56.1",
-    "@typescript-eslint/parser": "^8.56.1",
-    "@eslint-react/eslint-plugin": "^2.13.0",
-    "eslint-plugin-import-x": "^4.16.1",
+    "@eslint-react/eslint-plugin": "^5.10.0",
+    "@eslint/js": "^10.0.1",
+    "@next/eslint-plugin-next": "^16.2.9",
+    "@typescript-eslint/eslint-plugin": "^8.62.0",
+    "@typescript-eslint/parser": "^8.62.0",
+    "eslint-plugin-import-x": "^4.17.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-perfectionist": "^5.6.0",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "globals": "^17.3.0"
+    "eslint-plugin-perfectionist": "^5.9.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.7.0"
   },
   "devDependencies": {
-    "eslint": "^10.0.0",
-    "next": "^16.1.6",
-    "prettier": "^3.8.1",
-    "typescript": "^5.9.3"
+    "eslint": "^10.6.0",
+    "next": "^16.2.9",
+    "prettier": "^3.9.3",
+    "typescript": "^6.0.3"
+
+
+
+
+
+
+
+
+
+
+    
   },
   "peerDependencies": {
     "eslint": "^10.0.0",

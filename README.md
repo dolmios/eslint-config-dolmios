@@ -1,5 +1,5 @@
 # eslint-config-dolmios
-> A comprehensive ESLint (9) setup using [@typescript-eslint](https://typescript-eslint.io), integrated with Prettier and tailored TSConfig setups for modern JavaScript and TypeScript projects. This config is designed for my projects, but feel free to use it as a starting point for your own projects.
+> A comprehensive ESLint (10) setup using [@typescript-eslint](https://typescript-eslint.io), integrated with Prettier and tailored TSConfig setups for modern JavaScript and TypeScript projects. This config is designed for my projects, but feel free to use it as a starting point for your own projects.
 
 
 ## Install
@@ -7,8 +7,13 @@
 pnpm  add  eslint-config-dolmios
 ```
 
+### Requirements
+- **ESLint** `^10.0.0`
+- **React** `>=19` and **react-dom** `>=19` (for the React/JSX rules)
+- **TypeScript** `>=5.9` (type-aware rules expect a `tsconfig.json` in your project root)
+
 ## Usage
-This ESLint configuration is designed for use with ESLint v9, which uses a flat config format. Follow the steps below to integrate it into your project.
+This ESLint configuration is designed for use with ESLint v10, which uses a flat config format. Follow the steps below to integrate it into your project.
 
 ### Setting Up ESLint
 1.  **Create an ESLint Configuration File**: In the root of your project, create a file named  `eslint.config.js`.
@@ -36,18 +41,7 @@ export default [
 
 ### Next.js Compatibility
 
-This configuration automatically detects your Next.js project structure and adjusts accordingly:
-
-- **App Router Support**: Works with Next.js App Router projects
-- **Pages Router Support**: Works with Next.js Pages Router projects
-- **Non-Next.js Projects**: Works with regular React projects without Next.js
-
-The configuration automatically detects:
-- If you're using Next.js (by checking for `next.config.js`)
-- If you're using App Router (by checking for an `app` directory)
-- If you're using Pages Router (by checking for `pages` or `src/pages` directories)
-
-Rules like `no-html-link-for-pages` are only enabled when a Pages Router is detected.
+Next.js rules (`@next/eslint-plugin-next`) are included by default and work for App Router, Pages Router, and plain React projects alike. They're tuned to be non-disruptive — most run as warnings, and `no-html-link-for-pages` is disabled since it isn't relevant to App Router projects. Re-enable or adjust any of them via project-specific overrides.
 
 ---
 
@@ -85,13 +79,15 @@ This config also exports two TSConfig setups, `base` and `lib` respectively. The
   
 
 ## Configurations
-You can view the ESLint configuration in the reference notes: [reference.txt](./reference.txt). 
+You can view the fully-resolved ESLint configuration in the reference snapshots: [reference-js.txt](./reference-js.txt) (JavaScript) and [reference-ts.txt](./reference-ts.txt) (TypeScript/React).
 
 ## Acknowledgments
 This configuration leverages several third-party libraries to enhance linting and formatting capabilities:
 
 -   **[@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint)**: Provides TypeScript-specific linting rules.
+-   **[@eslint-react/eslint-plugin](https://github.com/Rel1cx/eslint-react)**: Modern React linting (React, DOM, web-api, naming-convention, RSC).
 -   **[eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)**: Enforces the rules of React Hooks.
+-   **[eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x)**: Import/export hygiene, ordering, and cycle detection.
 -   **[eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)**: Static AST checker for accessibility rules on JSX elements.
 -   **[eslint-plugin-next](https://github.com/vercel/next.js/tree/canary/packages/eslint-plugin-next)**: Provides Next.js specific linting rules.
 -   **[eslint-plugin-perfectionist](https://github.com/azat-io/eslint-plugin-perfectionist)**: Handles sorting of imports, objects, and other elements for a consistent codebase.

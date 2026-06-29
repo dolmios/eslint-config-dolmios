@@ -1,0 +1,4 @@
+# Excludes prettier from the global pnpm minimum-release-age supply-chain policy
+# (the pinned version is newer than the policy window). Local-dev only; not published.
+minimumReleaseAgeExclude:
+  - prettier@3.9.3
