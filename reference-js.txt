@@ -261,7 +261,8 @@
     "preserve-caught-error": [
       2,
       {
-        "requireCatchParameter": false
+        "requireCatchParameter": false,
+        "errorClassNames": []
       }
     ],
     "require-yield": [
@@ -979,10 +980,10 @@
   },
   "plugins": [
     "@",
-    "@eslint-react:@eslint-react/eslint-plugin@5.10.0",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.62.0",
+    "@eslint-react:@eslint-react/eslint-plugin@5.14.8",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.64.0",
     "@next/next",
-    "perfectionist:eslint-plugin-perfectionist@5.9.1",
+    "perfectionist:eslint-plugin-perfectionist@5.10.0",
     "react-hooks:eslint-plugin-react-hooks@7.0.0",
     "jsx-a11y:eslint-plugin-jsx-a11y@6.10.2",
     "import-x:eslint-plugin-import-x@4.17.1"
@@ -991,7 +992,7 @@
   "languageOptions": {
     "sourceType": "module",
     "ecmaVersion": 2026,
-    "parser": "typescript-eslint/parser@8.62.0",
+    "parser": "typescript-eslint/parser@8.64.0",
     "parserOptions": {
       "ecmaVersion": "latest",
       "sourceType": "module",
